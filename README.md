@@ -22,7 +22,7 @@
 ## Features
 * 🎮 75+ games (and more on the way)
 * ♾️ Open source under the MIT license
-* ↘️ Easy to deploy
+* ↘️ Easy to deploy (though it does take a long time)
 * 🖥️💻📱 Cross-platform UI
 
 ## Motivation
