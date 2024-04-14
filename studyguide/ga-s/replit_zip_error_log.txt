@@ -1,0 +1,1 @@
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file result","time":"2023-11-27T16:28:11Z"}

@@ -1,0 +1,11 @@
+body {
+	padding: 0;
+	margin: auto;
+	max-width: 800px;
+	overflow: hidden;
+	background-color: black;
+}
+
+canvas {
+	background-color: black;
+}
