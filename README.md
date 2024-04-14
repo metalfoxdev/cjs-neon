@@ -1,8 +1,6 @@
 <p align="center">
 	<img width="360" height="360" src="assets/img/icon_fullsize.png">
 </p>
-
-# JustStudy
 <p align="center">Definitely not an unblocked game website! 😉</p>
 
 ## Features
