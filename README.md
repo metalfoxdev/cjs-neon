@@ -4,10 +4,10 @@
 <p align="center">Definitely not an unblocked game website! 😉</p>
 
 ## Features
-* 75+ games (and more on the way)
-* Open source under the MIT license
-* Easy to deploy
-* Clean UI
+* 🎮 75+ games (and more on the way)
+* ♾️ Open source under the MIT license
+* ↘️ Easy to deploy
+* 🖥️💻📱 Cross-platform UI
 
 ## Motivation
 
