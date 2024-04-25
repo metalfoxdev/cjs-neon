@@ -408,5 +408,15 @@
         "name": "Tennis Physics",
         "img": "assets/icons/82.jpg",
         "url": "studyguide/tp/index.html"
+    },
+    {
+        "name": "Tap Tap Shots",
+        "img": "assets/icons/83.jpg",
+        "url": "studyguide/tts/index.html"
+    },
+    {
+        "name": "Car Stunt King",
+        "img": "assets/icons/84.jpg",
+        "url": "studyguide/csk/index.html"
     }
 ]
