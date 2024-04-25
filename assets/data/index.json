@@ -418,5 +418,10 @@
         "name": "Car Stunt King",
         "img": "assets/icons/84.jpg",
         "url": "studyguide/csk/index.html"
+    },
+    {
+        "name": "Spacebar Clicker",
+        "img": "assets/icons/85.png",
+        "url": "studyguide/sp-c/index.html"
     }
 ]
