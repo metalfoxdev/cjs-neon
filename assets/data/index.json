@@ -423,5 +423,10 @@
         "name": "Spacebar Clicker",
         "img": "assets/icons/85.png",
         "url": "studyguide/sp-c/index.html"
+    },
+    {
+        "name": "Eggy Car",
+        "img": "assets/icons/86.png",
+        "url": "studyguide/e-c/index.html"
     }
 ]
