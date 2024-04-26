@@ -428,5 +428,10 @@
         "name": "Eggy Car",
         "img": "assets/icons/86.png",
         "url": "studyguide/e-c/index.html"
+    },
+    {
+        "name": "Getting Over It",
+        "img": "assets/icons/87.jpg",
+        "url": "studyguide/goi/index.html"
     }
 ]
