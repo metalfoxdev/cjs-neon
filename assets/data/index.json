@@ -433,5 +433,10 @@
         "name": "Getting Over It",
         "img": "assets/icons/87.jpg",
         "url": "studyguide/goi/index.html"
+    },
+    {
+        "name": "Drift Boss",
+        "img": "assets/icons/88.jpg",
+        "url": "studyguide/d-b/index.html"
     }
 ]
