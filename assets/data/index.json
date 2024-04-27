@@ -443,5 +443,10 @@
         "name": "RoBeats",
         "img": "assets/icons/89.jpg",
         "url": "studyguide/rbe/index.html"
+    },
+    {
+        "name": "PolyRhythm",
+        "img": "assets/icons/90.png",
+        "url": "studyguide/pr/index.html"
     }
 ]
