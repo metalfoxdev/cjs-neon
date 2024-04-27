@@ -438,5 +438,10 @@
         "name": "Drift Boss",
         "img": "assets/icons/88.jpg",
         "url": "studyguide/d-b/index.html"
+    },
+    {
+        "name": "RoBeats",
+        "img": "assets/icons/89.jpg",
+        "url": "studyguide/rbe/index.html"
     }
 ]
