@@ -458,5 +458,10 @@
         "name": "QWOP",
         "img": "assets/icons/92.jpg",
         "url": "studyguide/qp/index.html"
+    },
+    {
+        "name": "Bad Piggies",
+        "img": "assets/icons/93.jpg",
+        "url": "studyguide/b-p/index.html"
     }
 ]
