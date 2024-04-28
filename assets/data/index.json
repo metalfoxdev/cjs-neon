@@ -448,5 +448,15 @@
         "name": "PolyRhythm",
         "img": "assets/icons/90.png",
         "url": "studyguide/pr/index.html"
+    },
+    {
+        "name": "Fancy Pants Adventures 2",
+        "img": "assets/icons/91.png",
+        "url": "studyguide/fpa-2/index.html"
+    },
+    {
+        "name": "QWOP",
+        "img": "assets/icons/92.jpg",
+        "url": "studyguide/qp/index.html"
     }
 ]
