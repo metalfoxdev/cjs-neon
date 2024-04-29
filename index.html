@@ -43,8 +43,8 @@
         transform: scale(1.07);
     }
     .listing-text {
-        font-size: 1.4em;
-        color: #d0ced2;
+        font-size: 1.5em;
+        color: #CCCCCC;
         text-decoration: none !important;
     }
     .loader-text {
@@ -67,15 +67,16 @@
         box-shadow: 0 0 20px #000000; /* Add shadow effect on hover */
     }
     .gradient {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      background: linear-gradient(334deg, #ff0000, #bf4040, #000000); /* top, center, bottom */
-      background-size: 180% 180%;
-      animation: gradient-animation 6s ease infinite;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: linear-gradient(334deg, #ff0000, #bf4040, #000000); /* top, center, bottom */
+        background-size: 180% 180%;
+        animation: gradient-animation 6s ease infinite;
+        filter: brightness(0.85);
     }
     @keyframes gradient-animation {
       0% {
@@ -93,10 +94,11 @@
   </head>
   <body>
 
-    <div class="gradient"></div>
+    <div class="gradient" id="gradient"></div>
     <h1 class="page-title">JustStudy</h1>
     <h3 class="page-desc" id="desc">I have nothing to say.</h3>
 
+    <script src="assets/js/random_bg.js"></script>
     <script src="assets/js/pickdesc.js"></script>
 
     <!-- Load Bootstrap JS -->
@@ -115,6 +117,7 @@
     <script src="assets/js/renderlist.js"></script>
 
     <div class="text-center bottom-text">
+        <p>Take a look at our <a href="qa.html">Q and A!</a></p>
         <p>JustStudy is proudly ad-free and open source! Get the source code on <a href="https://github.com/metalfoxdev/juststudy-site">Github</a>.</p>
     </div>
   </body>
