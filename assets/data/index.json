@@ -463,5 +463,15 @@
         "name": "Bad Piggies",
         "img": "assets/icons/93.jpg",
         "url": "studyguide/b-p/index.html"
+    },
+    {
+        "name": "JustFall.LoL",
+        "img": "assets/icons/94.jpg",
+        "url": "studyguide/jf/index.html"
+    },
+    {
+        "name": "Super Liquid Soccer",
+        "img": "assets/icons/95.png",
+        "url": "studyguide/sls/index.html"
     }
 ]
