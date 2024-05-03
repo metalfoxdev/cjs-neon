@@ -9,10 +9,10 @@ const array = [
     "Yep, you found it.",
     "Made in England!",
     "Thatoneham is a holy man",
-    "This site is so cold, it will put your firewall out!",
     "If two witches had two watches, which witch would be looking at which watch?",
     "<-- i love arrows -->",
-    "Road work ahead? Uh yea, I sure hope it does."
+    "Road work ahead? Uh yea, I sure hope it does.",
+    "Salute Max and Bailey. They both did their TASSSOOOMMMAAAIII and contributed game suggestions. 🫡"
 ];
 const randomIndex = Math.floor(Math.random() * array.length);
 
