@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,350 +17,378 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script>
-      function changeTitle() {
-          var title = document.title;
-
-          if (document.hidden) {
-              document.title = "Classroom";
-          } else {
-              document.title = "Study";
-          }
-      }
-    
-      document.addEventListener("visibilitychange", changeTitle);
-
-    </script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
     <style id="main-style">
-    body {
-        background-color: #1f1130;
-        font-family: 'Comfortaa', sans-serif;
-    }
-    .grid-img {
-        max-width: 100%;
-        height: auto;
-    }
-    .page-title {
-        font-size: 4em;
-        color: #d0ced2;
-        text-align: center;
-    }
-    .glow {
-        font-size: 80px;
-        color: #0084ff;
-        text-align: center;
-        -webkit-animation: glow 1s ease-in-out infinite alternate;
-        -moz-animation: glow 1s ease-in-out infinite alternate;
-        animation: glow 1s ease-in-out infinite alternate;
+        body {
+            background-color: #1f1130;
+            font-family: 'Comfortaa', sans-serif;
         }
-    @keyframes glow {
-     from {
-     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 25px #00ccff, 0 0 30px #00ccff, 0 0 35px #00ccff, 0 0 40px #00ccff, 0 0 45px #00ccff;
-     }
-     to {
-      text-shadow: 0 0 20px #fff, 0 0 25px #29d4ff, 0 0 30px #29d4ff, 0 0 35px #29d4ff, 0 0 40px #29d4ff, 0 0 45px #29d4ff, 0 0 50px #29d4ff;
-     }
-    }
-    .page-desc {
-        text-align: center;
-        color: #d0ced2
-    }
-    .zoom-effect {
-        transition: transform 0.3s;
-    }
 
-    .zoom-effect:hover {
-        transform: scale(1.07);
-    }
-    .listing-text {
-        font-size: 1.5em;
-        color: #CCCCCC;
-        text-decoration: none !important;
-    }
-    .loader-text {
-        font-size: 2em;
-        color: #d0ced2;
-        text-decoration: none !important;
-    }
-    .griditem {
-    text-decoration: none !important;
-    }
-    .bottom-text {
-        font-size: 1.2em;
-        color: #d0ced2;
-    }
-    .img-hover-shadow {
-        transition: box-shadow 0.35s; /* Add smooth transition for the shadow effect */
-    }
+        .grid-img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    .img-hover-shadow:hover {
-        box-shadow: 0 0 20px #000000; /* Add shadow effect on hover */
-    }
-    .gradient {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background: linear-gradient(334deg, #ff0000, #bf4040, #000000); /* top, center, bottom */
-        background-size: 180% 180%;
-        animation: gradient-animation 6s ease infinite;
-        filter: brightness(0.85);
-    }
-    @keyframes gradient-animation {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-    * {
-        font-family: 'Comfortaa';font-size: 22px;
-    }
-    .settings-box {
-        margin-top: auto;
-        border-radius: 15px;
-        padding: 20px;
-        background-color: #9454c4;
-        opacity: 1;
-        text-align: center;
-        width: 300px;
-        padding-bottom: 100px;
-        margin: 50px auto;
-        position: absolute;
-        left: 40%;
-        z-index:2;
-    }
-    .setting {
-       margin-bottom: 10px;
-       position: fixed;
-    }    
-    .icon-bar {
-     width: 90px;
-     background-color: #9454c4;
-     border-radius: 20px;
-     border-color: coral;
-     position: fixed;
-     left: -80px;
-     transition: all 0.3s ease;
-     z-index:3;
-    }
-    .box {
-    display: none;
-    text-align: center;
-    background-color: #9454c4;
-    border-radius: 15px
-    }
-    .icon-bar:hover {
-     left: 0;
-    }
+        .page-title {
+            font-size: 4em;
+            color: #d0ced2;
+            text-align: center;
+        }
 
-    .icon-bar a {
-      display: block;
-      text-align: center;
-      transition: all 0.3s ease;
-      padding: 6px;   
-      color: white;
-      font-size: 45px;
-      border-radius: 20px;
-      border: 10px;
-      padding-right: 5px; 
-      position: relative;
-      opacity: 0.4;
-    }
+        .glow {
+            font-size: 80px;
+            color: #0084ff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
 
-    .icon-bar a:hover {
-     background-color: #9454c4;
-     transition: width 0.6s ease-out-in; 
-     padding: 12px 12px;
-     padding-right: 170px; 
-     opacity: 1;   
-    }
-    
-    .icon-bar a span {
-      display: none;
-      position: absolute;
-      top: 53%;
-      left: 60%;
-      transform: translate(-50%, -50%);
-    }
-
-    .icon-bar a:hover span {
-      display: block;
-    }
-        
-    .white-text {
-    color: white;
-    }
-    .white-bg {
-    background-color: white;
-    }
-        
-    .active {
-     background-color: #c375ff;
-    }
-        
-    .curve1 {
-     border-radius: 10px;
-    }    
-
-    .icon-bar a:hover .search-bar {
-    width: 150px;
-    padding-right: 20px;
-    opacity: 1;
-    }
-
-    .search-bar {
-     position: absolute;
-     top: 50%;
-     right: -12%;
-     transform: translateY(-50%);
-     width: 80px;
-     height: 40px;
-     padding: 0 10px;
-     border: none;
-     border-radius: 20px;
-      outline: none;
-     background-color: transparent;
-     color: white;
-     font-size: 16px;
-     transition: width 0.3s ease-out, padding-right 0.3s ease-out, opacity 0.3s ease-out;
-      opacity: 0;
-    }      
-
-    .search-bar::placeholder {
-      color: white;
-    } 
-    .Not_color_bottom {
-        background-color: #c375ff;
-    }
-    .Not_color_top {
-      background-color: #9454c4;
-    } 
-    .video-wrapper {
-      overflow: hidden;
-      float: left;
-      position: relative;
-      width: 40%;
-      height: 480px;
-      left: 30%;
-    }   
-    iframe {
-      z-index:1;
-      float: left;
-      width: 100%;
-      height: 480px;
- 
-    }
-    .info{
-    width: 40%;
-    border-radius: 15px; 
-    background-color: #c375ff;
-    }
-  </style>
-
-  </head>
-  <body>
-    <!-- start of what i added-->
-    <div class="icon-bar">
-        <a class="active" href="index.html"> <i class="fa fa-home"></i><span>Home</span></a>
-        <a class="active" href="qa.html"> <i class="fa fa-question"></i><span>Q&A</span></a>  
-        <a class="active" id="toggleButton"> <i class="fa fa-cog"></i><span>Settings</span></a>   
-        <a class="active" onclick="javascript:history.go(-1)"> <i class="fa fa-arrow-left"></i><span>Back</span></a>
-    </div>
-      <div class="settings-box setting" id="settings-box">
-        <h2 class="white-text" >Settings</h2>
-        <div class="setting">
-            <label class="white-text" for="dark-mode">name change:</label>
-            <input type="checkbox" id="dark-mode curve1">
-        </div>
-  </div>
-      <script>
-        var menuOpen = false; 
-
-        function toggleMenu() {
-            var menu = document.getElementById('settings-box');
-            if (menuOpen) {
-                menu.style.display = 'none'; 
-                
-            } else {
-                menu.style.display = 'block'; 
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 25px #00ccff, 0 0 30px #00ccff, 0 0 35px #00ccff, 0 0 40px #00ccff, 0 0 45px #00ccff;
             }
-            menuOpen = !menuOpen;
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 25px #29d4ff, 0 0 30px #29d4ff, 0 0 35px #29d4ff, 0 0 40px #29d4ff, 0 0 45px #29d4ff, 0 0 50px #29d4ff;
+            }
         }
 
-        document.getElementById('toggleButton').addEventListener('click', toggleMenu);
-        function myFunction() {
+        .page-desc {
+            text-align: center;
+            color: #d0ced2
+        }
 
-        var checkBox = document.getElementById("myCheck");
-  
-        var text = document.getElementById("text");
+        .zoom-effect {
+            transition: transform 0.3s;
+        }
 
- 
-        if (checkBox.checked == true){
-            text.style.display = "block";
-        } else {
-            text.style.display = "none";
-         }
-        }     
-         // hides the settings option after page loads
-        document.addEventListener("DOMContentLoaded", () => {         
-          document.getElementById('settings-box').style.display = 'none';
-       });
-    </script>
-    <div class="gradient" id="gradient"></div>
-    <h1 class="page-title glow">JustStudy</h1>
-    <h3 class="page-desc" id="desc">I have nothing to say.</h3>
-    
-    <script src="assets/js/random_bg.js"></script>
-    <script src="assets/js/pickdesc.js"></script>
-    <center>
-      <div class="rounded video-wrapper">
-        <iframe width="640" height="480" src="https://kq2wpazd0v3.typeform.com/to/xl1ixNQ6" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
+        .zoom-effect:hover {
+            transform: scale(1.07);
+        }
+
+        .listing-text {
+            font-size: 1.5em;
+            color: #CCCCCC;
+            text-decoration: none !important;
+        }
+
+        .loader-text {
+            font-size: 2em;
+            color: #d0ced2;
+            text-decoration: none !important;
+        }
+
+        .griditem {
+            text-decoration: none !important;
+        }
+
+        .bottom-text {
+            font-size: 1.2em;
+            color: #d0ced2;
+        }
+
+        .img-hover-shadow {
+            transition: box-shadow 0.35s; /* Add smooth transition for the shadow effect */
+        }
+
+        .img-hover-shadow:hover {
+            box-shadow: 0 0 20px #000000; /* Add shadow effect on hover */
+        }
+
+        .gradient {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(334deg, #ff0000, #bf4040, #000000); /* top, center, bottom */
+            background-size: 180% 180%;
+            animation: gradient-animation 6s ease infinite;
+            filter: brightness(0.85);
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        * {
+            font-family: 'Comfortaa';
+            font-size: 22px;
+        }
+
+        .settings-box {
+            margin-top: auto;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #9454c4;
+            opacity: 1;
+            text-align: center;
+            width: 300px;
+            padding-bottom: 100px;
+            margin: 50px auto;
+            position: absolute;
+            left: 40%;
+            z-index: 2;
+        }
+
+        .setting {
+            margin-bottom: 10px;
+            position: fixed;
+        }
+
+        .icon-bar {
+            width: 90px;
+            background-color: rgba(148, 84, 196, 0.5); /* Adjusted opacity here */
+            border-radius: 20px;
+            border-color: coral;
+            position: fixed;
+            left: -80px;
+            transition: all 0.3s ease;
+            z-index: 3;
+            opacity: 0.1;
+        }
+
+        .fade-under-settings {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black fade */
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: none;
+        }
+
+        .icon-bar:hover {
+            left: 0;
+            opacity: 1;
+        }
+
+        .icon-bar a {
+            display: block;
+            text-align: center;
+            transition: all 0.3s ease;
+            padding: 6px;
+            color: white;
+            font-size: 45px;
+            border-radius: 20px;
+            border: 10px;
+            padding-right: 5px;
+            position: relative;
+        }
+
+        .icon-bar a:hover {
+            background-color: #9454c4;
+            transition: width 0.6s ease-out-in;
+            padding: 12px 12px;
+            padding-right: 170px;
+        }
+
+        .icon-bar a span {
+            display: none;
+            position: absolute;
+            top: 53%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+
+        .icon-bar a:hover span {
+            display: block;
+        }
+
+        .white-text {
+            color: white;
+        }
+
+        .white-bg {
+            background-color: white;
+        }
+
+        .active {
+            background-color: #c375ff;
+        }
+
+        .curve1 {
+            border-radius: 10px;
+        }
+
+        .icon-bar a:hover .search-bar {
+            width: 150px;
+            padding-right: 20px;
+            opacity: 1;
+        }
+
+        .search-bar {
+            position: absolute;
+            top: 50%;
+            right: -12%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 40px;
+            padding: 0 10px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            transition: width 0.3s ease-out, padding-right 0.3s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+
+        .search-bar::placeholder {
+            color: white;
+        }
+
+        .Not_color_bottom {
+            background-color: #c375ff;
+        }
+
+        .Not_color_top {
+            background-color: #9454c4;
+        }
+
+        .video-wrapper {
+            overflow: hidden;
+            float: left;
+            position: relative;
+            width: 40%;
+            height: 480px;
+            left: 30%;
+        }
+
+        iframe {
+            z-index: 1;
+            float: left;
+            width: 100%;
+            height: 480px;
+
+        }
+
+        .info {
+            width: 40%;
+            border-radius: 15px;
+            background-color: #c375ff;
+        }
+    </style>
+
+</head>
+<body>
+<!-- start of what i added-->
+<div class="icon-bar">
+    <a class="active" href="index.html"> <i class="fa fa-home"></i><span>Home</span></a>
+    <a class="active" id="toggleButton"> <i class="fa fa-cog"></i><span>Settings</span></a>
+    <a class="active" onclick="javascript:history.go(-1)"> <i class="fa fa-arrow-left"></i><span>Back</span></a>
+</div>
+<div class="fade-under-settings" id="fade-under-settings"></div>
+<div class="settings-box setting" id="settings-box">
+    <h2 class="white-text">Settings</h2>
+    <div class="setting">
+        <label class="white-text" for="dark-mode">name change:</label>
+        <input type="checkbox" id="dark-mode curve1">
     </div>
-      <div class="info">
-        <div class="accordion accordion-flush Not_color_bottom" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header Not_color_bottom" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Do you need to login to send a game request?
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">no, everything here is free and open source</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Some games arent working
-              </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">you can submit the game not working in the submit form below </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                How can i submit a game?
-              </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">ou can go to our github page for this website (page here) and send a merge request</div>
-            </div>
-          </div>
-        </div>
-      </div> 
-    </center>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</div>
+<script>
+    var menuOpen = false;
 
-  </body>
+    function toggleMenu() {
+        var menu = document.getElementById('settings-box');
+        var fade = document.getElementById('fade-under-settings');
+        if (menuOpen) {
+            menu.style.display = 'none';
+            fade.style.display = 'none';
+            document.body.style.backgroundColor = "white";
+
+        } else {
+            menu.style.display = 'block';
+            fade.style.display = 'block';
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+        menuOpen = !menuOpen;
+    }
+
+    document.getElementById('toggleButton').addEventListener('click', toggleMenu);
+
+    // hides the settings option after page loads
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById('settings-box').style.display = 'none';
+        document.getElementById('fade-under-settings').style.display = 'none';
+    });
+</script>
+<div class="gradient" id="gradient"></div>
+<h1 class="page-title glow">JustStudy</h1>
+<h3 class="page-desc" id="desc">I have nothing to say.</h3>
+
+<script src="assets/js/random_bg.js"></script>
+<script src="assets/js/pickdesc.js"></script>
+<center>
+    <div class="rounded video-wrapper">
+        <iframe width="640" height="480" src="https://kq2wpazd0v3.typeform.com/to/xl1ixNQ6" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+<div class="info">
+    <div class="accordion accordion-flush Not_color_bottom" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header Not_color_bottom" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Do you need to login to send a game request?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                 data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">no, everything here is free and open source</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Some games arent working
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                 data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">you can submit the game not working in the submit form below </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    How can i submit a game?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                 data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">ou can go to our github page for this website (page here) and send a merge
+                    request
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</center>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
 </html>
