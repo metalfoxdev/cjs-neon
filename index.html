@@ -249,13 +249,12 @@
   <body>
     <!-- start of what i added -->
     <div class="icon-bar">
-        <a class="active" href="qa.html"> <i class="fa fa-question"></i><span>Q&A</span></a>  
+        <a class="active" href="qa.html"> <i class="fa fa-question"></i><span>Q&A</span></a>
         <a class="active" id="toggleButton"> <i class="fa fa-cog"></i><span>Settings</span></a>   
         <a class="active">
           <i class="fa fa-search"></i>
           <input type="text" class="search-bar" id ="search-bar" placeholder="Search">
         </a>
-        <a class="active" onclick="javascript:history.go(-1)"> <i class="fa fa-arrow-left"></i><span>Back</span></a>
       </div>
     </div>
     <script>
@@ -276,72 +275,106 @@
    document.getElementById("search-bar").addEventListener("input", handleSearch);
     </script>
     <div class="toast-container position-fixed  text-white bottom-0 end-0 p-3">
-        <div id="liveToast" class="toast Not_color_bottom" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="welcomeToast" class="toast Not_color_bottom" role="alert" aria-live="assertive" aria-atomic="true">
           <div class="toast-header Not_color_top">
-            <i class="fa fa-smile-o white-text" aria-hidden="true"></i>
-            <strong class="me-auto white-text">&nbsp;&nbsp;&nbsp;JustStudy</strong>
+            <i class="fa fa-bell white-text" aria-hidden="true"></i>
+            <strong class="me-auto white-text">&nbsp;&nbsp;&nbsp;Welcome!</strong>
             <small></small>
             <button type="button" class="btn-close white-bg" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
           <div class="toast-body">
-           welcome to juststudy! definitely a study site...
+           Welcome to JustStudy! Definitely a study website. Enjoy your time here!
           </div>
         </div>
-        <div id="liveToast2" class="toast Not_color_bottom" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="newcontentToast" class="toast Not_color_bottom" role="alert" aria-live="assertive" aria-atomic="true">
           <div class="toast-header Not_color_top">
-            <i class="fa fa-smile-o white-text" aria-hidden="true"></i>
-            <strong class="me-auto white-text">&nbsp;&nbsp;&nbsp;JustStudy</strong>
+            <i class="fa fa-bell white-text" aria-hidden="true"></i>
+            <strong class="me-auto white-text">&nbsp;&nbsp;&nbsp;New Stuff!</strong>
             <small></small>
             <button type="button" class="btn-close white-bg" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
-          <div class="toast-body">
-            enjoy your time here! and dont get caught
+          <div class="toast-body" id="newcontentToastText">
+           placeholder
           </div>
         </div>
     </div>
-</div>
 
-    
+    <!-- BEGIN Notify Scripts -->
     <script>
-        const toastLiveExample = document.getElementById('liveToast')
-        const toastLiveExample2 = document.getElementById('liveToast2')     
+
+    function updateToastText(id, text) {
+      document.getElementById(id).innerText = text;
+    };
+
+    if (localStorage.getItem('visited')) {
+      console.log("wb");
+    } else {
+      localStorage.setItem('visited', true);
+      document.addEventListener("DOMContentLoaded", () => {
+          const welcomeToast = bootstrap.Toast.getOrCreateInstance(document.getElementById("welcomeToast"));
+          welcomeToast.show()
+      });
+    };
+    </script>
+    <!-- END Notify Scripts -->
+
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
-          const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-          const toastBootstrap2 = bootstrap.Toast.getOrCreateInstance(toastLiveExample2)  
-          toastBootstrap.show();  
-          setTimeout(function() {
-          toastBootstrap2.show();
-          }, 1000)
           document.getElementById('settings-box').style.display = 'none';
           document.getElementById('fade-under-settings').style.display = 'none';
-       });
-     
+       })
     </script>
       <div class="settings-box setting" id="settings-box">
         <h2 class="white-text" >Settings</h2>
         <div class="setting">
-            <label class="white-text" for="dark-mode">name change:</label>
-            <input type="checkbox" id="dark-mode curve1 textchangebox" onclick="TextChange()">
+            <label class="white-text" for="dark-mode">Tab Cloak:</label>
+            <input type="checkbox" id="dark-mode curve1 textchangebox" onclick="changeTitle()">
+            <select id="cloak-presets" style="display: none;">
+              <option value='{"icon": "https://ssl.gstatic.com/classroom/favicon.png", "tabName": "Home"}' selected>Google Classroom</option>
+            </select>
         </div>
   </div>
+
   <div class="fade-under-settings" id="fade-under-settings"></div>
+
   <script>
-    function changeTitle() {
-      if (document.getElementById('textchangebox').checked) {
-        var title = document.title;
-        if (document.hidden) {
-            document.title = "Classroom";
-        } else {
-            document.title = "JustStudy";
-        }
-      } else {
-          document.title = "JustStudy";
-          alert("waiting to be checked :/");
-      }
-  }
-  
-    document.addEventListener("visibilitychange", changeTitle);
+    var checkbox = document.getElementById("dark-mode curve1 textchangebox");
+    var comboBox = document.getElementById("cloak-presets");
+
+    if (checkbox.checked) {
+        comboBox.style.display = "block";
+    } else {
+        comboBox.style.display = "none";
+    }
   </script>
+
+  <script>
+  function changeFavicon(newFaviconPath) {
+    let favicon = document.querySelector('link[rel="icon"]') || document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.href = newFaviconPath;
+
+    document.head.appendChild(favicon);
+  };
+  function changeTitle() {
+        if (document.getElementById('dark-mode curve1 textchangebox').checked) {
+          const optionValue = document.getElementById("cloak-presets").value;
+          const optionJSON = JSON.parse(optionValue);
+          document.title = optionJSON.tabName;
+          changeFavicon(optionJSON.icon);
+          const iconUrl = optionJSON.icon;
+        } else {
+          document.title = "JustStudy";
+          const iconUrl = "assets/img/favicon.ico"
+          changeFavicon(iconUrl);
+        };
+        localStorage.setItem("pageTitle", document.title);
+        localStorage.setItem("pageIcon", iconUrl);
+  };
+
+  changeTitle();
+  </script>
+
       <script>
         var menuOpen = false; 
 
@@ -398,7 +431,6 @@
     <script src="assets/js/renderlist.js"></script>
 
     <div class="text-center bottom-text">
-        <p>Take a look at our <a href="qa.html">Q and A!</a></p>
         <p>JustStudy is proudly ad-free and open source! Get the source code on <a href="https://github.com/metalfoxdev/juststudy-site">Github</a>.</p>
     </div>
   </body>
