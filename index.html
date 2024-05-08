@@ -383,7 +383,9 @@
         localStorage.setItem("pageIcon", iconUrl);
   };
 
-  changeTitle();
+  document.addEventListener('DOMContentLoaded', function() {
+    changeTitle();
+  });
   </script>
 
   <script>
