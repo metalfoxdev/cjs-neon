@@ -286,17 +286,6 @@
            Welcome to JustStudy! Definitely a study website. Enjoy your time here!
           </div>
         </div>
-        <div id="newcontentToast" class="toast Not_color_bottom" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="toast-header Not_color_top">
-            <i class="fa fa-bell white-text" aria-hidden="true"></i>
-            <strong class="me-auto white-text">&nbsp;&nbsp;&nbsp;New Stuff!</strong>
-            <small></small>
-            <button type="button" class="btn-close white-bg" data-bs-dismiss="toast" aria-label="Close"></button>
-          </div>
-          <div class="toast-body" id="newcontentToastText">
-           placeholder
-          </div>
-        </div>
     </div>
 
     <!-- BEGIN Notify Scripts -->
@@ -327,10 +316,14 @@
       <div class="settings-box setting" id="settings-box">
         <h2 class="white-text" >Settings</h2>
         <div class="setting">
-            <label class="white-text" for="dark-mode">Tab Cloak:</label>
+            <label class="white-text" for="dark-mode">Tab Cloak: </label>
             <input type="checkbox" id="dark-mode curve1 textchangebox" onclick="changeTitle()">
-            <select id="cloak-presets" style="display: none;">
-              <option value='{"icon": "https://ssl.gstatic.com/classroom/favicon.png", "tabName": "Home"}' selected>Google Classroom</option>
+            <select id="cloak-presets">
+              <option value='{"icon": "assets/img/tab_change/gclassroom.png", "tabName": "Home"}'>Google Classroom</option>
+              <option value='{"icon": "assets/img/tab_change/tassomai.ico", "tabName": "Tassomai"}'>Tassomai</option>
+              <option value='{"icon": "assets/img/tab_change/sparxmaths.ico", "tabName": "Sparx Maths"}'>Sparx Maths</option>
+              <option value='{"icon": "assets/img/tab_change/sparxscience.png", "tabName": "My Homework - Sparx Science"}'>Sparx Science</option>
+              <option value='{"icon": "assets/img/tab_change/khan.ico", "tabName": "Khan Academy"}'>Khan Academy</option>
             </select>
         </div>
   </div>
@@ -338,17 +331,17 @@
   <div class="fade-under-settings" id="fade-under-settings"></div>
 
   <script>
-    var checkbox = document.getElementById("dark-mode curve1 textchangebox");
-    var comboBox = document.getElementById("cloak-presets");
+  function selectOptionByText(text) {
+    var selectElement = document.getElementById("cloak-presets");
+    var options = selectElement.options;
 
-    if (checkbox.checked) {
-        comboBox.style.display = "block";
-    } else {
-        comboBox.style.display = "none";
+    for (var i = 0; i < options.length; i++) {
+        if (options[i].innerText === text) {
+            options[i].selected = true;
+            break;
+        }
     }
-  </script>
-
-  <script>
+  }
   function changeFavicon(newFaviconPath) {
     let favicon = document.querySelector('link[rel="icon"]') || document.createElement('link');
     favicon.rel = 'icon';
@@ -357,15 +350,33 @@
     document.head.appendChild(favicon);
   };
   function changeTitle() {
+        var checkbox = document.getElementById("dark-mode curve1 textchangebox");
+        var comboBox = document.getElementById("cloak-presets");
+
+        if (checkbox.checked) {
+            comboBox.style.display = "block";
+        } else {
+            comboBox.style.display = "none";
+        }
+        if (localStorage.getItem("tab-cloak")) {
+          document.title = localStorage.getItem("pageTitle");
+          changeFavicon(localStorage.getItem("pageIcon"));
+          selectOptionByText(localStorage.getItem("boxName"));
+
+        }
         if (document.getElementById('dark-mode curve1 textchangebox').checked) {
+          localStorage.setItem("tab-cloak", true);
           const optionValue = document.getElementById("cloak-presets").value;
+          const optionName = document.getElementById("cloak-presets").innerHTML;
           const optionJSON = JSON.parse(optionValue);
           document.title = optionJSON.tabName;
           changeFavicon(optionJSON.icon);
-          const iconUrl = optionJSON.icon;
+          var iconUrl = optionJSON.icon;
+          localStorage.setItem("boxName", optionName);
         } else {
+          localStorage.setItem("tab-cloak", false);
           document.title = "JustStudy";
-          const iconUrl = "assets/img/favicon.ico"
+          var iconUrl = "assets/img/favicon.ico"
           changeFavicon(iconUrl);
         };
         localStorage.setItem("pageTitle", document.title);
@@ -375,6 +386,12 @@
   changeTitle();
   </script>
 
+  <script>
+  const comboBox = document.getElementById('cloak-presets');
+  comboBox.addEventListener('change', function() {
+      changeTitle();
+  });
+  </script>
       <script>
         var menuOpen = false; 
 
