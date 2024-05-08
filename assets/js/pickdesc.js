@@ -14,7 +14,7 @@ const array = [
     "Road work ahead? Uh yea, I sure hope it does.",
     "Salute Max and Bailey. They both did their TASSSOOOMMMAAAIII and contributed game suggestions. 🫡",
     "If RoBeats is too hard for you, I think that's a skill issue. (I'm taking to you Connar)",
-    "Hi Logan!",
+    "Hi Logan!"
 ];
 const randomIndex = Math.floor(Math.random() * array.length);
 
