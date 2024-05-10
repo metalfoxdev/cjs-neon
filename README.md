@@ -20,7 +20,7 @@
 [![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/metalfoxdev/juststudy-site)
 
 ## Features
-* 🎮 90+ games (and more on the way)
+* 🎮 100+ games (and more on the way)
 * ♾️ Open source under the MIT license
 * ↘️ Easy to deploy (though it does take a long time)
 * 🖥️💻📱 Cross-platform UI
