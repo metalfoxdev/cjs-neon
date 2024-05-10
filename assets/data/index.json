@@ -473,5 +473,40 @@
         "name": "Super Liquid Soccer",
         "img": "assets/icons/95.png",
         "url": "studyguide/sls/index.html"
+    },
+    {
+        "name": "Dadish 2",
+        "img": "assets/icons/96.jpg",
+        "url": "studyguide/d2/index.html"
+    },
+    {
+        "name": "Friday night funking",
+        "img": "assets/icons/97.png",
+        "url": "studyguide/ff/index.html"
+    },
+    {
+        "name": "SandBoxels",
+        "img": "assets/icons/98.jpg",
+        "url": "studyguide/sb/index.html"
+    },
+    {
+        "name": "Splunkey",
+        "img": "assets/icons/99.jpg",
+        "url": "studyguide/sp/index.html"
+    },
+    {
+        "name": "Samurai rabbit 1",
+        "img": "assets/icons/100.jpg",
+        "url": "studyguide/sr-1/index.html"
+    },
+    {
+        "name": "Samurai rabbit 2",
+        "img": "assets/icons/101.jpg",
+        "url": "studyguide/sr-2/index.html"
+    },
+    {
+        "name": "roof top snipers 2",
+        "img": "assets/icons/102.jpg",
+        "url": "studyguide/rts-2/index.html"
     }
 ]
