@@ -1,3 +1,5 @@
+# MOVED TO CODEBERG: https://codeberg.org/metalfoxdev/juststudy-site
+
 <p align="center">
 	<img width="360" height="360" src="assets/img/icon_fullsize.png">
 </p>
