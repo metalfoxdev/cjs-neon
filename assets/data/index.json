@@ -518,5 +518,10 @@
         "name": "borrito bison revenge",
         "img": "assets/icons/104.webp",
         "url": "studyguide/bb-r/index.html"
+    },
+    {
+        "name": "Eaglercraft offline (1.5.2)",
+        "img": "assets/icons/105.png",
+        "url": "studyguide/Ec-1.5/index.html"
     }
 ]
