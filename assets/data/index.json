@@ -523,5 +523,10 @@
         "name": "Eaglercraft offline (1.5.2)",
         "img": "assets/icons/105.png",
         "url": "studyguide/Ec-1.5/index.html"
+    },
+    {
+        "name": "Grind Craft",
+        "img": "assets/icons/106.jpg",
+        "url": "studyguide/gc/index.html"
     }
 ]
