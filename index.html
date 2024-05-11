@@ -165,7 +165,7 @@
     }
 
     .icon-bar a:hover {
-     background-color: #9454c4;
+     background-color: rgb(148, 84, 196);
      transition: width 0.6s ease-out-in; 
      padding: 12px 12px;
      padding-right: 170px; 
@@ -232,21 +232,73 @@
     .Not_color_top {
       background-color: #9454c4;
     } 
-    .fade-under-settings {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black fade */
-            top: 0;
-            left: 0;
-            z-index: 1;
-            display: none;
+        .changelog {
+        border-radius: 15px;
+        width: 45%;
+        padding: 40px;
+        position: fixed;
+        bottom: 5%;
+        left: 25%;
+        background-color: rgb(148, 84, 196);
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 0px 20px 0px blueviolet(0, 0, 0, 0.3);
+        overflow: hidden;
+        z-index: 9999;
+        
+    }
+    .changelog h1, .changelog h2, .changelog h4, .changelog h5, .changelog p {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+    .glowcl {
+        animation: glow 2s infinite alternate;
+    }
+    @keyframes glowcl {
+        from {
+            box-shadow: 0 0 10px 0px rgb(148, 84, 196);
         }
+        to {
+            box-shadow: 0 0 20px 10px rgb(148, 84, 196);
+        }
+    }
+    .closebt {
+        font-family: 'Comfortaa', sans-serif;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: 0;
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 15px;
+        transition: all 0.5s ease;
+    }
+    .closebt:hover {
+        letter-spacing: 3px;
+        background-color: rgb(148, 84, 196);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+    }
+    .closebt:active {
+        letter-spacing: 3px;
+        background-color: rgb(148, 84, 196);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
 
   </style>
 
   </head>
+  
   <body>
+      
         <!--test analytics. to see if this is a good one-->
     <script async data-id="101453035" src="//static.getclicky.com/js"></script>
 <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101453035ns.gif" /></p></noscript>
@@ -322,7 +374,7 @@
             Coming soon...
         </div>
   </div>
-
+  
   <div class="fade-under-settings" id="fade-under-settings"></div>
 
       <script>
@@ -361,7 +413,7 @@
     <div class="gradient" id="gradient"></div>
     <h1 class="page-title glow">JustStudy</h1>
     <h3 class="page-desc" id="desc">I have nothing to say.</h3>
-
+    <script src="assets/js/changelog.js"></script>
     <script src="assets/js/random_bg.js"></script>
     <script src="assets/js/pickdesc.js"></script>
 
