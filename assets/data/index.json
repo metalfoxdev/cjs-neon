@@ -508,5 +508,15 @@
         "name": "roof top snipers 2",
         "img": "assets/icons/102.jpg",
         "url": "studyguide/rts-2/index.html"
+    },
+    {
+        "name": "borrito bison lancha libre",
+        "img": "assets/icons/103.jpg",
+        "url": "studyguide/bb-ll/index.html"
+    },
+    {
+        "name": "borrito bison revenge",
+        "img": "assets/icons/104.webp",
+        "url": "studyguide/bb-r/index.html"
     }
 ]
