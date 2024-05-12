@@ -10,65 +10,80 @@ const changelogCSS = `
         z-index: 1;
         display: none;
     }
+    .changelog-image {
+        max-width: 130%;
+        max-height: 130%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        display: none;
+    }
+    .closebt {
+        font-family: 'Comfortaa', sans-serif;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: 0;
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 15px;
+        transition: all 0.5s ease;
+        z-index: 10000;
+    }
+    .closebt:hover {
+        letter-spacing: 3px;
+        background-color: rgb(148, 84, 196);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+    }
+    .closebt:active {
+        letter-spacing: 3px;
+        background-color: rgb(148, 84, 196);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
     </style>
 `;
-
-// Define the HTML content of the changelog popup
-const changelogHTML = `
-    <div class="changelog glowcl">
-        <center><h1> Changelog </h1></center>
-        <h2> V0.0.1 </h2>
-        <h4>---=== added games ===---</h4>
-        <h5> dadish 2 </h5>
-        <h5> eagler craft 1.5.2 </h5>
-        <h5> roof top snipers 2 </h5>
-        <h5> dadish 2 </h5>
-        <h5> borrito bison revenge </h5>
-        <h5> borrito bison launcha libre </h5>
-        <h5> spelunkey </h5>
-        <h5> samurai rabbit 1 and 2 </h5>
-        <h5> friday night funkin </h5>
-        <p>
-        <h4>---=== issues fixed ===---</h4>
-        <h5> fixed little alchemy 2 </h5>
-        <p>  
-        <h4>---=== issues to be fixed / games to add ===---</h4>
-        <h5> add settings </h5>
-        <h5> fix cookie clicker </h5>
-        <h5> adding doge miner 2 </h5>
-        <h5> fix grind craft (its pretty fun) </h5>
-        <h5> fix quake </h5>
-        <h5> unblock sand boxels and re add it </h5>
-        <p>
-        <div class="fade-under-settings" id="fade-under-settings"></div>
-    </div>
-    <button class="closebt">Close</button>
-`;
-
-// Define the CSS styles for the changelog and close button
 
 // Create a <style> element and append the CSS styles
 const styleElement = document.createElement('style');
 styleElement.innerHTML = changelogCSS;
 document.head.appendChild(styleElement);
 
-// Create a <div> element for the changelog and set its HTML content
-const changelogDiv = document.createElement('div');
-changelogDiv.innerHTML = changelogHTML;
+// Create an <img> element for the changelog image and set its attributes
+const changelogImage = document.createElement('img');
+changelogImage.src = "assets/img/change_Log/changelog_V0.0.1.png";
+changelogImage.alt = "Change Log";
+changelogImage.classList.add("changelog-image");
 
-// Append the changelog <div> to the document body
-document.body.appendChild(changelogDiv);
+// Append the changelog image to the document body
+document.body.appendChild(changelogImage);
 
-// Add event listener for the close button
-const closeButton = document.querySelector('.closebt');
+const closeButton = document.createElement('button');
+closeButton.innerText = "Close";
+closeButton.classList.add("closebt");
 closeButton.addEventListener('click', () => {
-    changelogDiv.style.display = 'none';
+    changelogImage.style.display = 'none';
+    closeButton.style.display = 'none';
 });
 
-// Function to show the changelog
+// Append the close button to the document body
+document.body.appendChild(closeButton);
+
+// Function to show the changelog image
 function showChangelog() {
-    changelogDiv.style.display = 'block';
+    changelogImage.style.display = 'block';
+    closeButton.style.display = 'block';
 }
 
-// Call the function to show the changelog (you can call this function whenever you want to show the changelog)
+// Call the function to show the changelog image (you can call this function whenever you want to show the changelog)
 showChangelog();
