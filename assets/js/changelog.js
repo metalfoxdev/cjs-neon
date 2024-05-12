@@ -54,18 +54,15 @@ const changelogCSS = `
     </style>
 `;
 
-// Create a <style> element and append the CSS styles
 const styleElement = document.createElement('style');
 styleElement.innerHTML = changelogCSS;
 document.head.appendChild(styleElement);
 
-// Create an <img> element for the changelog image and set its attributes
 const changelogImage = document.createElement('img');
 changelogImage.src = "assets/img/change_Log/changelog_V0.0.1.png";
 changelogImage.alt = "Change Log";
 changelogImage.classList.add("changelog-image");
 
-// Append the changelog image to the document body
 document.body.appendChild(changelogImage);
 
 const closeButton = document.createElement('button');
@@ -76,14 +73,11 @@ closeButton.addEventListener('click', () => {
     closeButton.style.display = 'none';
 });
 
-// Append the close button to the document body
 document.body.appendChild(closeButton);
 
-// Function to show the changelog image
 function showChangelog() {
     changelogImage.style.display = 'block';
     closeButton.style.display = 'block';
 }
 
-// Call the function to show the changelog image (you can call this function whenever you want to show the changelog)
 showChangelog();
