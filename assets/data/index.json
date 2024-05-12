@@ -528,5 +528,15 @@
         "name": "Grind Craft",
         "img": "assets/icons/106.jpg",
         "url": "studyguide/gc/index.html"
+    },
+    {
+        "name": "monkey mart",
+        "img": "assets/icons/107.jpg",
+        "url": "studyguide/mm/index.html"
+    },
+    {
+        "name": "Blumgi slime",
+        "img": "assets/icons/108.webp",
+        "url": "studyguide/b-s/index.html"
     }
 ]

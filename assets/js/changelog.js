@@ -8,13 +8,13 @@ const changelogCSS = `
         top: 0;
         left: 0;
         z-index: 1;
-        display: none;
+        display: none;  
     }
     .changelog-image {
-        max-width: 180%;
-        max-height: 180%;
+        max-width: 130%;
+        max-height: 130%;
         position: fixed;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 9999;
