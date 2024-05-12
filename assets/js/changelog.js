@@ -11,8 +11,8 @@ const changelogCSS = `
         display: none;
     }
     .changelog-image {
-        max-width: 160%;
-        max-height: 160%;
+        max-width: 180%;
+        max-height: 180%;
         position: fixed;
         top: 50%;
         left: 50%;
