@@ -538,5 +538,25 @@
         "name": "Blumgi slime",
         "img": "assets/icons/108.webp",
         "url": "studyguide/b-s/index.html"
+    },
+    {
+        "name": "Moto X3M 2",
+        "img": "assets/icons/111.jpg",
+        "url": "studyguide/mx3m-2/index.html"
+    },
+    {
+        "name": "Moto X3M Spooky land",
+        "img": "assets/icons/113.png",
+        "url": "studyguide/mx3m-s/index.html"
+    },
+    {
+        "name": "Moto X3M Pool party ",
+        "img": "assets/icons/112.jpg",
+        "url": "studyguide/mx3m-p/index.html"
+    },
+    {
+        "name": "Wordle Unlimited",
+        "img": "assets/icons/109.png",
+        "url": "studyguide/w-u/index.html"
     }
 ]
