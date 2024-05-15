@@ -485,7 +485,7 @@
         "url": "studyguide/ff/index.html"
     },
     {
-        "name": "SandBoxels",
+        "name": "SandBoxels(not working)",
         "img": "assets/icons/98.jpg",
         "url": "studyguide/sb/index.html"
     },
@@ -558,5 +558,60 @@
         "name": "Wordle Unlimited",
         "img": "assets/icons/109.png",
         "url": "studyguide/w-u/index.html"
+    },
+    {
+        "name": "Parking fury",
+        "img": "assets/icons/114.jpg",
+        "url": "studyguide/pf1/index.html"
+    },
+    {
+        "name": "Parking fury 2",
+        "img": "assets/icons/115.jpg",
+        "url": "studyguide/pf2/index.html"
+    },
+    {
+        "name": "Parking fury 3",
+        "img": "assets/icons/116.jpg",
+        "url": "studyguide/pf3/index.html"
+    },
+    {
+        "name": "Gun mayhem REDUX",
+        "img": "assets/icons/117.png",
+        "url": "studyguide/gmr/index.html"
+    },
+    {
+        "name": "Tag",
+        "img": "assets/icons/118.webp",
+        "url": "studyguide/t/index.html"
+    },
+    {
+        "name": "Fruit ninja",
+        "img": "assets/icons/120.png",
+        "url": "studyguide/fn/index.html"
+    },
+    {
+        "name": "Iron Snout",
+        "img": "assets/icons/119.jpg",
+        "url": "studyguide/is/index.html"
+    },
+    {
+        "name": "Blumgi rocket",
+        "img": "assets/icons/122.jpg",
+        "url": "studyguide/b-r/index.html"
+    },
+    {
+        "name": "Dadish 3",
+        "img": "assets/icons/123.jpg",
+        "url": "studyguide/d3/index.html"
+    },
+    {
+        "name": "Osu!",
+        "img": "assets/icons/124.jpeg",
+        "url": "studyguide/w-o/index.html"
+    },
+    {
+        "name": "10 minutes before dawn",
+        "img": "assets/icons/125.png",
+        "url": "studyguide/10mbd/index.html"
     }
 ]
