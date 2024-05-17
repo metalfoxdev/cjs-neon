@@ -59,7 +59,7 @@ styleElement.innerHTML = changelogCSS;
 document.head.appendChild(styleElement);
 
 const changelogImage = document.createElement('img');
-changelogImage.src = "assets/img/change_Log/changelog_V0.0.3.png";
+changelogImage.src = "assets/img/change_Log/changelog_V0.0.4.png";
 changelogImage.alt = "Change Log";
 changelogImage.classList.add("changelog-image");
 
