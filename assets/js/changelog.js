@@ -1,4 +1,4 @@
-const changelogCSS = `
+    const changelogCSS = `
     <style>
     .fade-under-settings {
         position: fixed;
@@ -11,8 +11,8 @@ const changelogCSS = `
         display: none;  
     }
     .changelog-image {
-        max-width: 150%;
-        max-height: 150%;
+        max-width: 120%;
+        max-height: 120%;
         position: fixed;
         top: 54%;
         left: 50%;
