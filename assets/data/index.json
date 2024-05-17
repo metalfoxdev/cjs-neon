@@ -135,11 +135,6 @@
         "url": "studyguide/dl-4/index.html"
     },
     {
-        "name": "EaglerCraftX",
-        "img": "assets/icons/50.png",
-        "url": "studyguide/ec-x/index.html"
-    },
-    {
         "name": "Elastic Face",
         "img": "assets/icons/65.png",
         "url": "studyguide/e-f/index.html"
@@ -518,11 +513,6 @@
         "name": "borrito bison revenge",
         "img": "assets/icons/104.webp",
         "url": "studyguide/bb-r/index.html"
-    },
-    {
-        "name": "Eaglercraft offline (1.5.2)",
-        "img": "assets/icons/105.png",
-        "url": "studyguide/Ec-1.5/index.html"
     },
     {
         "name": "Grind Craft",
