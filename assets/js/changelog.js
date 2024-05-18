@@ -11,10 +11,10 @@
         display: none;  
     }
     .changelog-image {
-        max-width: 120%;
-        max-height: 120%;
+        max-width: 110%;
+        max-height: 110%;
         position: fixed;
-        top: 54%;
+        top: 48%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 9999;
@@ -59,7 +59,7 @@ styleElement.innerHTML = changelogCSS;
 document.head.appendChild(styleElement);
 
 const changelogImage = document.createElement('img');
-changelogImage.src = "assets/img/change_Log/changelog_V0.0.4.png";
+changelogImage.src = "assets/img/change_Log/changelog_V0.0.5.png";
 changelogImage.alt = "Change Log";
 changelogImage.classList.add("changelog-image");
 
