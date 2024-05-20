@@ -25,7 +25,7 @@
         border: none;
         position: fixed;
         outline: none;
-        padding: 15px 20px;
+        padding: 10px 15px;
         font-size: 12px;
         font-weight: 700;
         color: #fff;
@@ -40,12 +40,36 @@
         transform: translateY(5px);
         box-shadow: 0px 0px 0px 0px #6c3d91;
     }
+    .changelog-media{
+        max-width: 110%;
+        max-height: 110%;
+        position: fixed;
+        top: 50%;
+        z-index: 998;
+        border-radius: 19px;
+    } 
     </style>
 `;
 
 const styleElement = document.createElement('style');
 styleElement.innerHTML = changelogCSS;
 document.head.appendChild(styleElement);
+
+const changelogVideo = document.createElement('video');
+changelogVideo.classList.add('changelog-media');
+changelogVideo.controls = true;
+changelogVideo.loop = true;
+changelogVideo.autoplay = true;
+changelogVideo.muted = true;
+
+
+const videoSource = document.createElement('source');
+videoSource.src = "assets/Vids/SideBar_tut.mp4";
+videoSource.type = "video/mp4";
+changelogVideo.appendChild(videoSource);
+
+
+document.body.appendChild(changelogVideo);
 
 const changelogImage = document.createElement('img');
 changelogImage.src = "assets/img/change_Log/changelog_V0.0.5.png";
@@ -60,6 +84,7 @@ closeButton.classList.add("closebt");
 closeButton.addEventListener('click', () => {
     changelogImage.style.display = 'none';
     closeButton.style.display = 'none';
+    changelogVideo.style.display = 'none';
 });
 
 document.body.appendChild(closeButton);
@@ -67,6 +92,7 @@ document.body.appendChild(closeButton);
 function showChangelog() {
     changelogImage.style.display = 'block';
     closeButton.style.display = 'block';
+    changelogVideo.style.display = 'block';
 }
 
 showChangelog();
