@@ -603,5 +603,10 @@
         "name": "10 minutes before dawn",
         "img": "assets/icons/125.png",
         "url": "studyguide/10mbd/index.html"
+    },
+    {
+        "name": "Drift Hunters",
+        "img": "assets/icons/126.avif",
+        "url": "studyguide/db-c/index.html"
     }
 ]

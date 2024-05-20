@@ -17,39 +17,28 @@
         top: 48%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 9999;
+        z-index: 998;
         display: none;
     }
     .closebt {
-        font-family: 'Comfortaa', sans-serif;
+        background-color: #8a4db9;
+        border: none;
         position: fixed;
-        top: 10px;
-        right: 10px;
-        padding: 10px 20px;
-        border-radius: 50px;
-        cursor: pointer;
-        border: 0;
-        background-color: white;
-        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        font-size: 15px;
-        transition: all 0.5s ease;
-        z-index: 10000;
-    }
-    .closebt:hover {
-        letter-spacing: 3px;
-        background-color: rgb(148, 84, 196);
-        color: hsl(0, 0%, 100%);
-        box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+        outline: none;
+        padding: 15px 20px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #6c3d91;
+        left: 66%;
+        top: 1%;
+        z-index: 999;
     }
     .closebt:active {
-        letter-spacing: 3px;
-        background-color: rgb(148, 84, 196);
-        color: hsl(0, 0%, 100%);
-        box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
-        transform: translateY(10px);
-        transition: 100ms;
+        transform: translateY(5px);
+        box-shadow: 0px 0px 0px 0px #6c3d91;
     }
     </style>
 `;
@@ -66,7 +55,7 @@ changelogImage.classList.add("changelog-image");
 document.body.appendChild(changelogImage);
 
 const closeButton = document.createElement('button');
-closeButton.innerText = "Close";
+closeButton.innerText = "X";
 closeButton.classList.add("closebt");
 closeButton.addEventListener('click', () => {
     changelogImage.style.display = 'none';
