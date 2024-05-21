@@ -348,6 +348,10 @@
     .News-media{
     z-index: 998;
     border-radius: 15px;
+    }
+    .descr{
+        display: none;
+        transform: translateX(100%);
     } 
     .descslidein {
     animation: descslidein linear 0s forwards;
@@ -499,10 +503,11 @@
     
     <div class="gradient" id="gradient"></div>
     <h1 class="page-title glow">JustStudy </h1> <!-- <center> <div class="devbox"> <h6>this aint the main site, only dev.<a href="https://metalfoxdev.codeberg.page/juststudy-site/"> Click here to go to the main one</h6> </div> </center> -->
-    <h3 class="page-desc" id="desc" class="desc">taylor wont take it down</h3>
+    <h3 class="page-desc" id="desc" class="descr">ello</h3>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
         const animationBox = document.getElementById('desc');
+        
 
         function startDescAnimation() {
             animationBox.classList.add('descslideout');
@@ -516,12 +521,16 @@
                 animationBox.classList.add('descslidein');
                 animationBox.addEventListener('animationend', handleAnimationEnd, { once: true });
             } else if (event.animationName === 'descslidein') {
+                animationBox.style.display = 'block';
                 animationBox.classList.remove('descslidein');
                 startDescAnimation();
             }
         }
+        setTimeout(()=> {
+            startDescAnimation();
+      }
+      ,1000);
 
-        startDescAnimation();
     });
     function randomdesc() {
     const array = [
@@ -576,7 +585,7 @@
                       <img src="./assets/img/New_Img/taylor.jpg" class="card-img-top" alt="taylor">
                       <div class="card-body">
                           <h5 class="card-title">Site is Back</h5>
-                          <p class="card-text">After some very specific person got mad and reported the site, we are back. (his surname is taylor as a clue)</p>
+                          <p class="card-text">After some very specific person got mad and reported the site, we are back. (his surname is taylor as a clue)d</p>
                       </div>
                   </div>
               </div>
