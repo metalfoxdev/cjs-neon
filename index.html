@@ -276,8 +276,7 @@
 
     @keyframes fadeInAnimation {
         0% {
-            opacity: 0;
-            top: 60%;
+            top: 200%;
         }
         100% {
             opacity: 1;
@@ -296,8 +295,7 @@
             top: 50%;
         }
         100% {
-            opacity: 0;
-            top: 60%;
+            top: 200%;
         }
     }
 
@@ -349,8 +347,37 @@
     }
     .News-media{
     z-index: 998;
-    border-radius: 19px;
+    border-radius: 15px;
     } 
+    .descslidein {
+    animation: descslidein linear 0s forwards;
+    pointer-events: none;
+    }
+
+.descslideout {
+    animation: descslideout linear 10s forwards;
+    pointer-events: none;
+    }
+
+    @keyframes descslideout {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-90%);
+    }
+}
+
+@keyframes descslidein {
+    0% {
+        transform: translateX(-90%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
   </style>
 
   </head>
@@ -472,14 +499,72 @@
     
     <div class="gradient" id="gradient"></div>
     <h1 class="page-title glow">JustStudy </h1> <!-- <center> <div class="devbox"> <h6>this aint the main site, only dev.<a href="https://metalfoxdev.codeberg.page/juststudy-site/"> Click here to go to the main one</h6> </div> </center> -->
-    <h3 class="page-desc" id="desc">The one and only</h3>
+    <h3 class="page-desc" id="desc" class="desc">taylor wont take it down</h3>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const animationBox = document.getElementById('desc');
+
+        function startDescAnimation() {
+            animationBox.classList.add('descslideout');
+            animationBox.addEventListener('animationend', handleAnimationEnd, { once: true });
+        }
+
+        function handleAnimationEnd(event) {
+            if (event.animationName === 'descslideout') {
+                randomdesc()
+                animationBox.classList.remove('descslideout');
+                animationBox.classList.add('descslidein');
+                animationBox.addEventListener('animationend', handleAnimationEnd, { once: true });
+            } else if (event.animationName === 'descslidein') {
+                animationBox.classList.remove('descslidein');
+                startDescAnimation();
+            }
+        }
+
+        startDescAnimation();
+    });
+    function randomdesc() {
+    const array = [
+    "LOLOLOLOLOLOLOLOL",
+    "Are you sure about that?",
+    "Hello user, this is the website speaking!",
+    "We are going to need a bigger boat.",
+    "If you came here for a study guide, you should leave.",
+    "Definitely not clickbait!",
+    "Have you done your homework? Didn't think so.",
+    "Yep, you found it.",
+    "Made in England!",
+    "Thatoneham is a holy man",
+    "If two witches had two watches, which witch would be looking at which watch?",
+    "<-- i love arrows -->",
+    "Road work ahead? Uh yea, I sure hope it does.",
+    "Salute Max and Bailey. They did TASSSOOOMMMAAAIII and contributed game suggestions. 🫡",
+    "If RoBeats is too hard for you, I think that's a skill issue. (I'm taking to you Connar)",
+    "Hi Logan!",
+    "im getting paid with gum, worth it",
+    "You can submit ideas in the q/a page!",
+    "always listening...",
+    "the germans came back on the 15th of may 2024, we survived",
+    "dont try beef noodles from canteen, i tried twice",
+    "spanish is useless, change my mind",
+    "who ever asked for bloxrob can keep dreaming",
+    "if i get pulled out of lesson for this website,🙈 🙉 🙊",
+    "dw olli apps ill revenge you 😡💢"
+    ];
+    const randomIndex = Math.floor(Math.random() * array.length);
+
+    document.getElementById("desc").textContent = array[randomIndex];
+    }
+
+
+    </script>
     <script src="assets/js/random_bg.js"></script>
      <!--<script src="assets/js/pickdesc.js"></script> -->
     <!-- Load Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <div class="News" id="CardBox">
       <center><h1> info <span class="badge text-bg-warning">New!</span> </h1></center>
-      <img class="news-image" src="./assets/img/change_Log/changelog_V0.0.5.png" alt="Changelog_V0.0.5">
+      <img class="news-image" src="./assets/img/change_Log/changelog_V0.0.7.png" alt="Changelog_V0.0.5">
       <button class="closebt" onclick="toggleNews()">X</button> 
       <div class="news-info">
           <center>
@@ -491,7 +576,7 @@
                       <img src="./assets/img/New_Img/taylor.jpg" class="card-img-top" alt="taylor">
                       <div class="card-body">
                           <h5 class="card-title">Site is Back</h5>
-                          <p class="card-text">After some very specific person got mad and reported the site, we are back.</p>
+                          <p class="card-text">After some very specific person got mad and reported the site, we are back. (his surname is taylor as a clue)</p>
                       </div>
                   </div>
               </div>
@@ -516,7 +601,7 @@
               <div class="col">
                   <div class="card text-bg-info h-100">
                       <div class="d-flex justify-content-center align-items-center">
-                          <video width="194" height="240" autoplay loop muted>
+                          <video width="194" height="240" autoplay loop muted class="News-media">
                               <source src="./assets/Vids/SideBar_tut.mp4" type="video/mp4">
                           </video>
                       </div>
