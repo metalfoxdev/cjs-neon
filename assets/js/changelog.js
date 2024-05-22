@@ -72,7 +72,7 @@ changelogVideo.appendChild(videoSource);
 document.body.appendChild(changelogVideo);
 
 const changelogImage = document.createElement('img');
-changelogImage.src = "assets/img/change_Log/changelog_V0.0.5.png";
+changelogImage.src = "assets/img/changelog.png";
 changelogImage.alt = "Change Log";
 changelogImage.classList.add("changelog-image");
 
