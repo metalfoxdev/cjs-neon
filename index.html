@@ -487,7 +487,7 @@
           document.getElementById('fade-under-settings').style.display = 'none';
        })
     </script>
-    <!-- for the sneaky will here is what i added this update. it was supprisingly easy-->>
+    <!-- for the sneaky will here is what i added this update. it was supprisingly easy-->
       <div class="settings-box setting" id="settings-box">
         <h2 class="white-text" >Settings</h2>
         <div class="setting">
@@ -496,13 +496,13 @@
                   Tab Cloaker - JustStudy
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="#" onclick="TabCloak('JustStudy','assets/img/favicon.ico' , 'JustStudy' )">JustStudy</a></li>
+                  <li><a class="dropdown-item" onclick="TabCloak('JustStudy','assets/img/favicon.ico' , 'JustStudy' )">JustStudy</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#"  onclick="TabCloak('Sceneca - Learn 2x Faster','assets/img/TabCloak/sceneca.ico' , 'Sceneca' )">Sceneca</a></li>
+                  <li><a class="dropdown-item"   onclick="TabCloak('Sceneca - Learn 2x Faster','assets/img/TabCloak/sceneca.ico' , 'Sceneca' )">Sceneca</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#"  onclick="TabCloak('Sparx Maths', 'assets/img/TabCloak/Sparx.ico', 'Sparx Maths')">Sparx</a></li>
+                  <li><a class="dropdown-item"   onclick="TabCloak('Sparx Maths', 'assets/img/TabCloak/Sparx.ico', 'Sparx Maths')">Sparx</a></li>
                   <li><hr class="dropdown-divider""></li>
-                  <li><a class="dropdown-item" href="#" onclick="TabCloak('Tassomai ', 'assets/img/TabCloak/Tassomai.ico' , 'Tassomai')">Tassomai</a></li>
+                  <li><a class="dropdown-item"   onclick="TabCloak('Tassomai ', 'assets/img/TabCloak/Tassomai.ico' , 'Tassomai')">Tassomai</a></li>
                 </ul>
               </div>
         </div>
@@ -641,14 +641,14 @@
     <!-- Load Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <div class="News" id="CardBox">
-      <center><h1> info <span class="badge text-bg-warning">New!</span> </h1></center>
+      <center><h1> News <span class="badge text-bg-warning"></span> </h1></center>
       <img class="news-image" src="./assets/img/change_Log/changelog_V0.0.7.png" alt="Changelog_V0.0.5">
       <button class="closebt" onclick="toggleNews()">X</button> 
       <div class="news-info">
           <center>
-          <h1><span class="badge text-bg-danger">The info</span></h1>
+          <h2><span class="badge text-bg-danger">The info</span></h2>
           </center>
-          <div class=" card-group">
+          <div class=" card-group  row-cols-md-3">
               <div class="col">
                   <div class="card text-bg-secondary h-100" style="max-height: 50%;">
                       <img src="./assets/img/New_Img/taylor.jpg" class="card-img-top" alt="taylor">
@@ -660,10 +660,10 @@
               </div>
               <div class="col">
                   <div class="card text-bg-warning h-100">
-                      <img src="./assets/img/New_Img/hapy.jpg" class="card-img-top" alt="happy">
+                      <img src="./assets/img/New_Img/images.png" class="card-img-top" alt="happy">
                       <div class="card-body">
-                          <h5 class="card-title">New Info Page</h5>
-                          <p class="card-text">Got bored, so I spent 3 hours working on this. Pretty nice.</p>
+                          <h5 class="card-title">Added Tab Cloak</h5>
+                          <p class="card-text">If you select a tab it gets blocked. go back in and the favicon are to that website!</p>
                       </div>
                   </div>
               </div>
@@ -689,15 +689,24 @@
                       </div>
                   </div>
               </div>
-          </div>
-          <div class="col">
-              <div class="card text-bg-success h-100">
-                  <img src="./assets/img/New_Img/breh.jpeg" class="card-img-top" alt="stop asking">
+              <div class="col">
+                <div class="card text-bg-success h-100">
+                    <img src="./assets/img/New_Img/breh.jpeg" class="card-img-top" alt="stop asking">
+                    <div class="card-body">
+                        <h5 class="card-title">Stop Asking</h5>
+                        <p class="card-text">And no, I'm not adding ⬛🟨.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-warning h-100">
+                  <img src="./assets/img/New_Img/hapy.jpg" class="card-img-top" alt="happy">
                   <div class="card-body">
-                      <h5 class="card-title">Stop Asking</h5>
-                      <p class="card-text">And no, I'm not adding ⬛🟨.</p>
+                      <h5 class="card-title">New Info Page</h5>
+                      <p class="card-text">Got bored, so I spent 3 hours working on this. Pretty nice.</p>
                   </div>
               </div>
+          </div>
           </div>
         </div>
     </div>
