@@ -1,7 +1,9 @@
 <p align="center">
-	<img width="512" height="288" src="assets/img/banner.png">
+	<img width="300" height="300" src="assets/img/icon_fullsize.png">
 </p>
 <p align="center">Definitely not an unblocked game website! 😉</p>
+
+# CJS Neon
 
 ## Deployment buttons (made by [BinBashBanana](https://github.com/BinBashBanana))
 
