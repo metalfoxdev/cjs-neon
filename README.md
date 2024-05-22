@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="360" height="360" src="assets/img/banner.png">
+	<img width="512" height="288" src="assets/img/banner.png">
 </p>
 <p align="center">Definitely not an unblocked game website! 😉</p>
 
