@@ -135,11 +135,6 @@
         "url": "studyguide/dl-4/index.html"
     },
     {
-        "name": "EaglerCraftX",
-        "img": "assets/icons/50.png",
-        "url": "studyguide/ec-x/index.html"
-    },
-    {
         "name": "Elastic Face",
         "img": "assets/icons/65.png",
         "url": "studyguide/e-f/index.html"
@@ -473,5 +468,145 @@
         "name": "Super Liquid Soccer",
         "img": "assets/icons/95.png",
         "url": "studyguide/sls/index.html"
+    },
+    {
+        "name": "Dadish 2",
+        "img": "assets/icons/96.jpg",
+        "url": "studyguide/d2/index.html"
+    },
+    {
+        "name": "Friday night funking",
+        "img": "assets/icons/97.png",
+        "url": "studyguide/ff/index.html"
+    },
+    {
+        "name": "SandBoxels(not working)",
+        "img": "assets/icons/98.jpg",
+        "url": "studyguide/sb/index.html"
+    },
+    {
+        "name": "Splunkey",
+        "img": "assets/icons/99.jpg",
+        "url": "studyguide/sp/index.html"
+    },
+    {
+        "name": "Samurai rabbit 1",
+        "img": "assets/icons/100.jpg",
+        "url": "studyguide/sr-1/index.html"
+    },
+    {
+        "name": "Samurai rabbit 2",
+        "img": "assets/icons/101.jpg",
+        "url": "studyguide/sr-2/index.html"
+    },
+    {
+        "name": "roof top snipers 2",
+        "img": "assets/icons/102.jpg",
+        "url": "studyguide/rts-2/index.html"
+    },
+    {
+        "name": "borrito bison lancha libre",
+        "img": "assets/icons/103.jpg",
+        "url": "studyguide/bb-ll/index.html"
+    },
+    {
+        "name": "borrito bison revenge",
+        "img": "assets/icons/104.webp",
+        "url": "studyguide/bb-r/index.html"
+    },
+    {
+        "name": "Grind Craft",
+        "img": "assets/icons/106.jpg",
+        "url": "studyguide/gc/index.html"
+    },
+    {
+        "name": "monkey mart",
+        "img": "assets/icons/107.jpg",
+        "url": "studyguide/mm/index.html"
+    },
+    {
+        "name": "Blumgi slime",
+        "img": "assets/icons/108.webp",
+        "url": "studyguide/b-s/index.html"
+    },
+    {
+        "name": "Moto X3M 2",
+        "img": "assets/icons/111.jpg",
+        "url": "studyguide/mx3m-2/index.html"
+    },
+    {
+        "name": "Moto X3M Spooky land",
+        "img": "assets/icons/113.png",
+        "url": "studyguide/mx3m-s/index.html"
+    },
+    {
+        "name": "Moto X3M Pool party ",
+        "img": "assets/icons/112.jpg",
+        "url": "studyguide/mx3m-p/index.html"
+    },
+    {
+        "name": "Wordle Unlimited",
+        "img": "assets/icons/109.png",
+        "url": "studyguide/w-u/index.html"
+    },
+    {
+        "name": "Parking fury",
+        "img": "assets/icons/114.jpg",
+        "url": "studyguide/pf1/index.html"
+    },
+    {
+        "name": "Parking fury 2",
+        "img": "assets/icons/115.jpg",
+        "url": "studyguide/pf2/index.html"
+    },
+    {
+        "name": "Parking fury 3",
+        "img": "assets/icons/116.jpg",
+        "url": "studyguide/pf3/index.html"
+    },
+    {
+        "name": "Gun mayhem REDUX",
+        "img": "assets/icons/117.png",
+        "url": "studyguide/gmr/index.html"
+    },
+    {
+        "name": "Tag",
+        "img": "assets/icons/118.webp",
+        "url": "studyguide/t/index.html"
+    },
+    {
+        "name": "Fruit ninja",
+        "img": "assets/icons/120.png",
+        "url": "studyguide/fn/index.html"
+    },
+    {
+        "name": "Iron Snout",
+        "img": "assets/icons/119.jpg",
+        "url": "studyguide/is/index.html"
+    },
+    {
+        "name": "Blumgi rocket",
+        "img": "assets/icons/122.jpg",
+        "url": "studyguide/b-r/index.html"
+    },
+    {
+        "name": "Dadish 3",
+        "img": "assets/icons/123.jpg",
+        "url": "studyguide/d3/index.html"
+    },
+    {
+        "name": "Osu!",
+        "img": "assets/icons/124.jpeg",
+        "url": "studyguide/w-o/index.html"
+    },
+    {
+        "name": "10 minutes before dawn",
+        "img": "assets/icons/125.png",
+        "url": "studyguide/10mbd/index.html"
+    },
+    {
+        "name": "Drift Hunters",
+        "img": "assets/icons/126.avif",
+        "url": "studyguide/db-c/index.html"
     }
 ]

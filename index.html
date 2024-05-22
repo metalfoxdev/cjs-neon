@@ -8,6 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>JustStudy</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <script src="assets/js/dontsavecookies.js"></script>
 
     <!-- Get the Comfortaa font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -165,7 +166,7 @@
     }
 
     .icon-bar a:hover {
-     background-color: #9454c4;
+     background-color: rgb(148, 84, 196);
      transition: width 0.6s ease-out-in; 
      padding: 12px 12px;
      padding-right: 170px; 
@@ -176,7 +177,7 @@
       display: none;
       position: absolute;
       top: 53%;
-      left: 60%;
+      left: 65%;
       transform: translate(-50%, -50%);
     }
 
@@ -232,21 +233,163 @@
     .Not_color_top {
       background-color: #9454c4;
     } 
-    .fade-under-settings {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black fade */
-            top: 0;
-            left: 0;
-            z-index: 1;
-            display: none;
+    .devbox {
+    position: relative;
+    top: 40px;
+    transform: translateY(-50%);
+    background-color: #9454c4;
+    border-radius: 15px;
+    padding: 6px;
+    color: white;
+    width: 300px;
+    }
+
+    .devbox p {
+      margin-bottom: 10px;
+     font-size: 1.2em;
+     text-align: center;
+    }
+
+     a {
+    color: #000000; /* Change to the color you desire */
+    text-decoration: underline; /* Optional: Add underline for better indication */
+    }
+    .News {
+    position: fixed;
+    background-color: #6b3991;
+    padding: 6px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: block;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    pointer-events: auto;
+    }
+
+    .fadeInAnimation {
+        animation: fadeInAnimation ease 1s forwards;
+        pointer-events: auto;
+    }
+
+    @keyframes fadeInAnimation {
+        0% {
+            top: 200%;
         }
+        100% {
+            opacity: 1;
+            top: 50%;
+        }
+    }
+
+    .fadeOutAnimation {
+        animation: fadeOutAnimation ease 1s forwards;
+        pointer-events: none;
+    }
+
+    @keyframes fadeOutAnimation {
+        0% {
+            opacity: 1;
+            top: 50%;
+        }
+        100% {
+            top: 200%;
+        }
+    }
+
+    .closebt {
+        background-color: #8a4db9;
+        border: none;
+        position: fixed;
+        outline: none;
+        padding: 10px 15px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #6c3d91;
+        right: 1%;
+        top: 1%;
+        z-index: 1001;
+    }
+
+    .closebt:active {
+        transform: translateY(5px);
+        box-shadow: 0px 0px 0px 0px #6c3d91;
+    }
+    .news-image {
+    max-width: 98%;
+    max-height: 98%;
+    position: fixed;
+    transform: translate(5%, -9%);
+    z-index: 998;
+    }
+    .news-info {
+    width: 58%;
+    height: 86%;
+    transform: translate(70%, 0%);
+    background-color: #9454c4;
+    border-radius: 15px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    }   
+    .news-info::-webkit-scrollbar {
+        display: none;
+    }
+    .card {
+        border: none;
+        min-width : 100%;
+        min-height:  100%;
+    }
+    .News-media{
+    z-index: 998;
+    border-radius: 15px;
+    }
+    .desc{
+        overflow-x: hidden;
+    } 
+    .descslidein {
+    animation: descslidein linear 0s forwards;
+    pointer-events: none;
+    }
+
+.descslideout {
+    animation: descslideout linear 10s forwards;
+    pointer-events: none;
+    }
+
+    @keyframes descslideout {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-90%);
+    }
+}
+
+@keyframes descslidein {
+    0% {
+        transform: translateX(-90%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 
   </style>
 
   </head>
+  
   <body>
+      
+        <!--test analytics. to see if this is a good one-->
+    <script async data-id="101453035" src="//static.getclicky.com/js"></script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101453035ns.gif" /></p></noscript>
     <!-- start of what i added -->
     <div class="icon-bar">
         <a class="active" href="qa.html"> <i class="fa fa-question"></i><span>Q&A</span></a>
@@ -255,6 +398,7 @@
           <i class="fa fa-search"></i>
           <input type="text" class="search-bar" id ="search-bar" placeholder="Search">
         </a>
+        <a class="active" onclick="toggleNews()" id="CardBT"> <i class="fa fa-newspaper-o"></i><span style="font-size: 24px;">News</span></a>
       </div>
     </div>
     <script>
@@ -319,7 +463,7 @@
             Coming soon...
         </div>
   </div>
-
+  
   <div class="fade-under-settings" id="fade-under-settings"></div>
 
       <script>
@@ -355,27 +499,165 @@
         }  
     </script>
     <!-- end of what i added-->
+    
     <div class="gradient" id="gradient"></div>
-    <h1 class="page-title glow">JustStudy</h1>
-    <h3 class="page-desc" id="desc">I have nothing to say.</h3>
+    <h1 class="page-title glow">JustStudy </h1> <!-- <center> <div class="devbox"> <h6>this aint the main site, only dev.<a href="https://metalfoxdev.codeberg.page/juststudy-site/"> Click here to go to the main one</h6> </div> </center> -->
+    <h3 class="page-desc" id="desc" class="descr">ello</h3>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const animationBox = document.getElementById('desc');
+        
 
+        function startDescAnimation() {
+            animationBox.classList.add('descslideout');
+            animationBox.addEventListener('animationend', handleAnimationEnd, { once: true });
+        }
+
+        function handleAnimationEnd(event) {
+            if (event.animationName === 'descslideout') {
+                randomdesc()
+                animationBox.classList.remove('descslideout');
+                animationBox.classList.add('descslidein');
+                animationBox.addEventListener('animationend', handleAnimationEnd, { once: true });
+            } else if (event.animationName === 'descslidein') {
+                animationBox.style.display = 'block';
+                animationBox.classList.remove('descslidein');
+                startDescAnimation();
+            }
+        }
+        setTimeout(()=> {
+            startDescAnimation();
+      }
+      ,1000);
+
+    });
+    function randomdesc() {
+    const array = [
+    "LOLOLOLOLOLOLOLOL",
+    "Are you sure about that?",
+    "Hello user, this is the website speaking!",
+    "We are going to need a bigger boat.",
+    "If you came here for a study guide, you should leave.",
+    "Definitely not clickbait!",
+    "Have you done your homework? Didn't think so.",
+    "Yep, you found it.",
+    "Made in England!",
+    "Thatoneham is a holy man",
+    "If two witches had two watches, which witch would be looking at which watch?",
+    "<-- i love arrows -->",
+    "Road work ahead? Uh yea, I sure hope it does.",
+    "Salute Max and Bailey. They did TASSSOOOMMMAAAIII and contributed game suggestions. 🫡",
+    "If RoBeats is too hard for you, I think that's a skill issue. (I'm taking to you Connar)",
+    "Hi Logan!",
+    "im getting paid with gum, worth it",
+    "You can submit ideas in the q/a page!",
+    "always listening...",
+    "the germans came back on the 15th of may 2024, we survived",
+    "dont try beef noodles from canteen, i tried twice",
+    "spanish is useless, change my mind",
+    "who ever asked for bloxrob can keep dreaming",
+    "if i get pulled out of lesson for this website,🙈 🙉 🙊",
+    "dw olli apps ill revenge you 😡💢"
+    ];
+    const randomIndex = Math.floor(Math.random() * array.length);
+
+    document.getElementById("desc").textContent = array[randomIndex];
+    }
+
+
+    </script>
     <script src="assets/js/random_bg.js"></script>
-    <script src="assets/js/pickdesc.js"></script>
-
+     <!--<script src="assets/js/pickdesc.js"></script> -->
     <!-- Load Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="News" id="CardBox">
+      <center><h1> info <span class="badge text-bg-warning">New!</span> </h1></center>
+      <img class="news-image" src="./assets/img/change_Log/changelog_V0.0.7.png" alt="Changelog_V0.0.5">
+      <button class="closebt" onclick="toggleNews()">X</button> 
+      <div class="news-info">
+          <center>
+          <h1><span class="badge text-bg-danger">The info</span></h1>
+          </center>
+          <div class=" card-group">
+              <div class="col">
+                  <div class="card text-bg-secondary h-100" style="max-height: 50%;">
+                      <img src="./assets/img/New_Img/taylor.jpg" class="card-img-top" alt="taylor">
+                      <div class="card-body">
+                          <h5 class="card-title">Site is Back</h5>
+                          <p class="card-text">After some very specific person got mad and reported the site, we are back. (his surname is taylor as a clue)d</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card text-bg-warning h-100">
+                      <img src="./assets/img/New_Img/hapy.jpg" class="card-img-top" alt="happy">
+                      <div class="card-body">
+                          <h5 class="card-title">New Info Page</h5>
+                          <p class="card-text">Got bored, so I spent 3 hours working on this. Pretty nice.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card text-bg-success h-100">
+                      <img src="./assets/img/New_Img/dum.png" class="card-img-top" alt="dummy">
+                      <div class="card-body">
+                          <h5 class="card-title">Some Idiot Keeps Asking for Burrito Bison</h5>
+                          <p class="card-text">its already added dum</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card text-bg-info h-100">
+                      <div class="d-flex justify-content-center align-items-center">
+                          <video width="194" height="240" autoplay loop muted class="News-media">
+                              <source src="./assets/Vids/SideBar_tut.mp4" type="video/mp4">
+                          </video>
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Use the Sidebar</h5>
+                          <p class="card-text">It's pretty handy.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card text-bg-success h-100">
+                  <img src="./assets/img/New_Img/breh.jpeg" class="card-img-top" alt="stop asking">
+                  <div class="card-body">
+                      <h5 class="card-title">Stop Asking</h5>
+                      <p class="card-text">And no, I'm not adding ⬛🟨.</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  <script>
+      var menuOpen = false;
 
+      function toggleNews() {
+          var Card = document.getElementById('CardBox');
+          if (menuOpen) {
+              Card.classList.remove('fadeOutAnimation');
+              Card.style.display = 'block';
+              Card.classList.add('fadeInAnimation');
+          } else {
+              Card.classList.remove('fadeInAnimation');
+              Card.classList.add('fadeOutAnimation');
+          }
+          menuOpen = !menuOpen;
+      }
+  </script>
     <div class="text-center" id="loader">
         <img src="assets/img/loader.gif" alt="Loader">
         <p class="loader-text">Loading...</p>
     </div>
-
+    
     <div class="container">
         <div class="row row-cols-3" id="itembox">
         </div>
     </div>
-
-    <script src="assets/js/renderlist.js"></script>
+    
+    <script src="assets/js/renderlist.js" defer></script>
 
     <div class="text-center bottom-text">
         <p>JustStudy is proudly ad-free and open source! Get the source code on <a href="https://github.com/metalfoxdev/juststudy-site">Github</a>.</p>
