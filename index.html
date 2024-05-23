@@ -125,8 +125,7 @@
         z-index: 2;
     }
     .setting {
-       margin-bottom: 10px;
-       position: fixed;
+        margin-bottom: 10px;
     }    
     .icon-bar {
      width: 90px;
@@ -489,8 +488,9 @@
     </script>
     <!-- for the sneaky will here is what i added this update. it was supprisingly easy-->
       <div class="settings-box setting" id="settings-box">
-        <h2 class="white-text" >Settings</h2>
+        <h2 class="white-text" >Settings / apps</h2>
         <div class="setting">
+            <hr class="rounded">
             <div class="dropdown" id="TabCloakOption">
                 <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="SettingDropdown">
                   Tab Cloaker - JustStudy
@@ -505,11 +505,54 @@
                   <li><a class="dropdown-item"   onclick="TabCloak('Tassomai ', 'assets/img/TabCloak/Tassomai.ico' , 'Tassomai')">Tassomai</a></li>
                 </ul>
               </div>
+              <hr class="rounded">
+              <h3 style="text-align: center;"> bootstrapper </h3>
+                <!-- Url to be fixed :(
+              <div class="mb-3 outline-warning">
+                <label for="basic-url" class="form-label">Url</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon3">https://</span>
+                  <input type="text" class="form-control" id="UrlBt" aria-describedby="basic-addon3 basic-addon4">
+                  <button class="btn btn-outline-warning" type="button" onclick="" id="UrlButton">Submit</button>
+                </div>
+                <div class="form-text" id="basic-addon4"></div>
+              </div> -->
+              <!-- Files -->
+              <label for="basic-url" class="form-label">File</label>
+              <div class="input-group">
+                <input type="file" class="form-control" id="FileInputBt" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+          <button class="btn btn-outline-warning" type="button" id="inputGroupFileAddon04" onmousedown="applyBootstrapFile()">Submit</button>
+              </div>
         </div>
   </div>
   
   <div class="fade-under-settings" id="fade-under-settings"></div>
+      <script>
+        // url bootstrap
+        function applyBootstrapUrl() {
+        var data = document.getElementById('UrlBt').value;
+        var newdata = 'https://' + data;
+        window.open().document.write(newdata,"_blank");
+        window.open().document.title = "about:blank"
+        }
+        document.getElementById('UrlButton').onclick = function(){
+            applyBootstrapUrl()
+        }
+        // file bootstrap :)))
+         function applyBootstrapFile() {
+             const fileInput = document.getElementById('FileInputBt').files[0]; 
+             const reader = new FileReader();
 
+             reader.onload = function (e) {
+                 const data = e.target.result;
+                 const newWindow = window.open();
+                 newWindow.document.open();
+                 newWindow.document.write(data);
+                 newWindow.document.title = "about:blank";
+             };
+             reader.readAsText(fileInput);
+            }
+      </script>
       <script>
         document.getElementById('toggleButton').addEventListener('click', toggleMenu);
         function myFunction() {
