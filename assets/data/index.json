@@ -608,5 +608,35 @@
         "name": "Drift Hunters",
         "img": "assets/icons/126.avif",
         "url": "studyguide/db-c/index.html"
+    },
+    {
+        "name": "Factory balls",
+        "img": "assets/icons/128.png",
+        "url": "studyguide/fb/index.html"
+    },  
+    {
+        "name": "Edge not found",
+        "img": "assets/icons/129.png",
+        "url": "studyguide/enf/index.html"
+    },
+    {
+        "name": "Pandemic 2",
+        "img": "assets/icons/130.avif",
+        "url": "studyguide/p2/index.html"
+    },
+    {
+        "name": "Papery planes",
+        "img": "assets/icons/131.png",
+        "url": "studyguide/paper-planes/index.html"
+    },
+    {
+        "name": "Big tower tiny cube",
+        "img": "assets/icons/132.png",
+        "url": "studyguide/bttc/index.html"
+    },
+    {
+        "name": "Bitlife",
+        "img": "assets/icons/133.jpg",
+        "url": "studyguide/btlf/index.html"
     }
 ]
