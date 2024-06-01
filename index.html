@@ -114,7 +114,7 @@
         padding: 20px;
         background-color: #9454c4;
         opacity: 1;
-        text-align: center;
+        margin-left: 10px;
         width: 50%;
         height: 80%;
         transform: translate(-30%,-25%);
@@ -410,7 +410,25 @@
         }
     }
 
+    @media screen and (max-width: 768px) {
+        .btn-group {
+            left: 5%;
+            transform: scale(0.8);
+        }
+    }
 
+    @media screen and (max-width: 480px) {
+        .btn-group {
+            left: 5%;
+            transform: scale(0.6);
+        }
+
+        .btn + .btn {
+            margin-left: 10px;
+        }
+    }
+
+    
   </style>
 
   </head>
@@ -489,10 +507,12 @@
     </script>
     <!-- for the sneaky will here is what i added this update. it was supprisingly easy-->
       <div class="settings-box setting" id="settings-box">
-        <h2 class="white-text" >Settings / apps</h2>
+        <h2 class="white-text" style="text-align: center;">Settings / apps</h2>
         <div class="setting">
+            <center>
+            <div class="btn-group">
             <hr class="rounded">
-            <div class="dropdown" id="TabCloakOption">
+            <div class="dropdown" id="TabCloakOption" >
                 <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="SettingDropdown">
                   Tab Cloaker - JustStudy
                 </button>
@@ -506,6 +526,10 @@
                   <li><a class="dropdown-item"   onclick="TabCloak('Tassomai ', 'assets/img/TabCloak/Tassomai.ico' , 'Tassomai')">Tassomai</a></li>
                 </ul>
               </div>
+              <button class="btn btn-outline-warning" type="button" href="txeditor.html" style="text-align: left;""><i class="fa fa-code" aria-hidden="true"></i>
+                Text Editor </button> 
+            </div>
+            </center>
               <hr class="rounded">
               <h3 style="text-align: center;"> bootstrapper </h3>
                 <!-- Url to be fixed :(
@@ -524,6 +548,7 @@
                 <input type="file" class="form-control" id="FileInputBt" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
           <button class="btn btn-outline-warning" type="button" id="inputGroupFileAddon04" onmousedown="applyBootstrapFile()">Submit</button>
               </div>
+              <hr class="rounded">
         </div>
   </div>
   
@@ -686,7 +711,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <div class="News" id="CardBox">
       <center><h1> News <span class="badge text-bg-warning"></span> </h1></center>
-      <img class="news-image" src="./assets/img/change_Log/changelog_V0.0.7.png" alt="Changelog_V0.0.5">
+      <img class="news-image" src="./assets/img/change_Log/changelog_V0.0.8.png" alt="Changelog_V0.0.5">
       <button class="closebt" onclick="toggleNews()">X</button> 
       <div class="news-info">
           <center>
@@ -704,19 +729,19 @@
               </div>
               <div class="col">
                   <div class="card text-bg-warning h-100">
-                      <img src="./assets/img/New_Img/YAY_SMILEY.jpg" class="card-img-top" alt="happy">
+                      <img src="./assets/img/New_Img/editor.jpeg" class="card-img-top" alt="happy">
                       <div class="card-body"> 
-                          <h5 class="card-title">Added Tab Cloak And Bootstrap</h5>
-                          <p class="card-text">You can hide the page with tab cloak. and open a file html in new tab as about:blank</p>
+                          <h5 class="card-title">Text Editor</h5>
+                          <p class="card-text">Got bored :I, its in the settings page btw</p>
                       </div>
                   </div>
               </div>
               <div class="col">
                   <div class="card text-bg-success h-100">
-                      <img src="./assets/img/New_Img/dum.png" class="card-img-top" alt="dummy">
+                      <img src="./assets/img/New_Img/timeflys.webp" class="card-img-top" alt="dummy">
                       <div class="card-body">
-                          <h5 class="card-title">Some Idiot Keeps Asking for Burrito Bison</h5>
-                          <p class="card-text">its already added dum</p>
+                          <h5 class="card-title">time flys</h5>
+                          <p class="card-text">man this week went fast :/</p>
                       </div>
                   </div>
               </div>

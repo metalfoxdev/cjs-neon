@@ -616,7 +616,7 @@
     },  
     {
         "name": "Edge not found",
-        "img": "assets/icons/129.png",
+        "img": "assets/icons/129.jpg",
         "url": "studyguide/enf/index.html"
     },
     {
@@ -638,5 +638,35 @@
         "name": "Bitlife",
         "img": "assets/icons/133.jpg",
         "url": "studyguide/btlf/index.html"
+    },
+    {
+        "name": "Pizza tower",
+        "img": "assets/icons/134.jpg",
+        "url": "studyguide/pizza/index.html"
+    },
+    {
+        "name": "Bottle flip",
+        "img": "assets/icons/135.png",
+        "url": "studyguide/b-f/index.html"
+    },
+    {
+        "name": "Tower crush 3D",
+        "img": "assets/icons/136.png",
+        "url": "studyguide/tc3d/index.html"
+    },
+    {
+        "name": "Tiny fishing",
+        "img": "assets/icons/137.jpg",
+        "url": "studyguide/b-f/index.html"
+    },
+    {
+        "name": "Blumgi swingo",
+        "img": "assets/icons/138.jpg",
+        "url": "studyguide/swg/index.html"
+    },
+    {
+        "name": "8 Ball pool",
+        "img": "assets/icons/139.png",
+        "url": "studyguide/8bp/index.html"
     }
 ]

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustStudy - Text Editor</title>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa|Arial|Impact' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- more images -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {
+        font-family: 'Comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        zoom: 220%;
+        background-color: #2c2c2c;
+    }
+
+    .editor-container {
+        width: 90%;
+        max-width: 800px; 
+        height: 98%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .editor_bar {
+        width: 108%;
+        max-height: 50px;
+        background-color: #5c5c5c;
+        border-radius: 30px;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+        position: relative;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.616);
+        transition:all 1000ms cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    .editor {
+        width: 115%;
+        height: calc(44% - 60px); 
+        max-width: 108%; 
+        resize:none;
+        font-size: 16px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.616);
+        margin-top: 10px;
+        background-color: #494949;
+        color: #fff;
+        transition:all 1000ms cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    .darkmodebt {
+        position: relative;
+        bottom: 77%;
+        left: 5px;
+    }
+
+    .darkmodebt label {
+        display: block;
+        width: 50px;
+        height: 26px;
+        left: 2px;
+        background-color: #c2c2c2;
+        border-color: #4b4b4b;
+        border-width: 15px;
+        border-radius: 30px;
+        transition:all 500ms cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    .darkmodebt label:before {
+        position: relative;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #2c2c2c;
+        display: block;
+        border-radius: 50%;
+        top: 3px;
+        left: 2px;
+        transition:all 500ms cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    .darkmodebt input:checked + label {
+        background: #2c2c2c;
+    }
+
+    .darkmodebt input:checked + label:before {
+        left: 28px;
+        background: #c2c2c2;
+    }
+
+    .darkmodebt input {
+        display: none;
+    }
+
+    .btn-group{
+        position: absolute;
+        top: 5px;
+    }
+
+    .btn{
+        border-radius: 30px;
+        background: #494949;
+        border-color: #c2c2c2;
+    }
+
+    .btn:hover{
+        background: #c2c2c2;
+        border-color: #494949;
+    }
+
+    .btn:focus{
+        background: #494949;
+        border-color: #c2c2c2;
+    }
+
+    .dropdown-menu{
+        margin-top: 0%;
+        position: absolute;
+        border-radius: 20px;
+        padding: 0%;
+        background: #808080;
+        opacity: 1;
+        width: 50%;
+        height: 300px;
+    }
+
+    .dropdown-item{
+        border-radius: 20px;
+        transition:all 700ms cubic-bezier(0.23, 1, 0.320, 1);
+        opacity: 1 !important;
+        background: #808080;
+        height: 42px;
+    }
+
+    .dropdown-item:hover{
+        background: #5c5c5c;
+    }
+    .icon-bar {
+     width: 90px;
+     background-color: #9454c4;
+     border-radius: 20px;
+     border-color: coral;
+     position: fixed;
+     left: -80px;
+     transition: all 0.3s ease;
+     z-index: 3;
+     opacity: 0.3;
+    }
+    .box {
+    display: none;
+    text-align: center;
+    background-color: #9454c4;
+    border-radius: 15px
+    }
+    .icon-bar:hover {
+     left: 0;
+     opacity: 1;
+    }
+
+    .icon-bar a {
+      display: block;
+      text-align: center;
+      transition: all 0.3s ease;
+      padding: 6px;   
+      color: white;
+      font-size: 45px;
+      border-radius: 20px;
+      border: 10px;
+      padding-right: 5px; 
+      position: relative;
+      opacity: 0.4;
+      z-index: 3;
+    }
+
+    .icon-bar a:hover {
+     background-color: rgb(148, 84, 196);
+     transition: width 0.6s ease-out-in; 
+     padding: 12px 12px;
+     padding-right: 170px; 
+     opacity: 1;   
+    }
+    
+    .icon-bar a span {
+      display: none;
+      position: absolute;
+      top: 53%;
+      left: 65%;
+      transform: translate(-50%, -50%);
+    }
+
+    .icon-bar a:hover span {
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+        .btn-group {
+            left: 5%;
+            transform: scale(0.8);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .btn-group {
+            left: 5%;
+            transform: scale(0.6);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <div class="editor_bar">
+            Text Editor
+            
+            <div class="darkmodebt">
+                <input type="checkbox" id="darkmodebt-1" >
+                <label for="darkmodebt-1" onclick="darkMode()"></label>
+             </div>
+             <div class="btn-group" style="left: 70px;">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Font</button>
+                <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" href="#" onclick="changeFont('Comfortaa')">Comfortaa</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeFont('Arial')">Arial</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeFont('Sans-serif')">Sans-serif</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeFont('Impact')">Impact</a></li>
+                </ul>
+            </div>
+            <div class="btn-group" style="left: 160px;">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Font Size</button>
+                <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" href="#" onclick="changeFontSize('12px')">12px</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeFontSize('14px')">14px</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeFontSize('16px')">16px</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeFontSize('18px')">18px</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeFontSize('20px')">20px</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeFontSize('22px')">22px</a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeFontSize('24px')">24px</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <textarea class="editor">Hello World!</textarea>
+    </div>
+    <div class="icon-bar">
+        <a class="active" href="index.html"> <i class="fa fa-home"></i><span>Home</span></a>
+    </div>
+    <script>    
+        function darkMode() {
+            var darkmodebt = document.getElementById("darkmodebt-1");
+            if (darkmodebt.checked == true) {
+                console.log("true");
+                document.querySelector(".editor_bar").style.background = '#5c5c5c';
+                document.querySelector(".editor_bar").style.color = '#fff';
+                document.querySelector(".editor").style.color = '#fff';
+                document.querySelector("body").style.background = '#2c2c2c';
+                document.querySelector(".editor").style.background = '#494949';
+            } else {
+                document.querySelector(".editor_bar").style.background = '#c2c2c2';
+                document.querySelector(".editor_bar").style.color = '#000000';
+                document.querySelector(".editor").style.color = '#000000';
+                document.querySelector("body").style.background = '#fff';
+                document.querySelector(".editor").style.background = '#c3c3c3';
+                console.log("false");
+            }
+        }
+
+        function changeFont(font) {
+            document.querySelector('.editor').style.fontFamily = font;
+        }
+
+        function changeFontSize(size) {
+            document.querySelector('.editor').style.fontSize = size;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
