@@ -668,5 +668,10 @@
         "name": "8 Ball pool",
         "img": "assets/icons/139.png",
         "url": "studyguide/8bp/index.html"
+    },
+    {
+        "name": "Gobdun",
+        "img": "assets/icons/140.png",
+        "url": "studyguide/gbdn/index.html"
     }
 ]
