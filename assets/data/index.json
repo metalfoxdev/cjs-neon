@@ -673,5 +673,10 @@
         "name": "Gobdun",
         "img": "assets/icons/140.png",
         "url": "studyguide/gbdn/index.html"
+    },
+    {
+        "name": "Interactive buddy",
+        "img": "assets/icons/141.jpeg",
+        "url": "studyguide/ib/index.html"
     }
 ]
