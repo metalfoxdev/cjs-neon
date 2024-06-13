@@ -678,5 +678,10 @@
         "name": "Interactive buddy",
         "img": "assets/icons/141.jpeg",
         "url": "studyguide/ib/index.html"
+    },
+    {
+        "name": "Learn to fly 1",
+        "img": "assets/icons/142.png",
+        "url": "studyguide/l2f1/index.html"
     }
 ]
