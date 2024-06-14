@@ -683,5 +683,10 @@
         "name": "Learn to fly 1",
         "img": "assets/icons/142.png",
         "url": "studyguide/l2f1/index.html"
+    },
+    {
+        "name": "ace blackjack",
+        "img": "assets/icons/143.png",
+        "url": "studyguide/bj-p/index.html"
     }
 ]

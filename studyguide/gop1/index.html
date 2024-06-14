@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>JustStudy</title>
+ <style>
+  .center{
+  top:50%;
+  left:50%;
+
+  }
+  body{
+    background-color: black;
+  }
+ </style>
+  </head>
+  <body>
+    <center>
+    <script src="/js/main.js"></script>
+    <div id="ruffle" class="center" width="80%" height="100%"></div>
+    <script src="ruffle.js"></script>
+    <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("ruffle");
+        player.id = "player";
+        player.style.width = "50%";
+        player.style.top = "10%";
+        player.style.height = "78%";
+        container.appendChild(player);
+        player.load("Game.swf");
+      });
+    </script>
+    </center>
+  </body>
+</html>
