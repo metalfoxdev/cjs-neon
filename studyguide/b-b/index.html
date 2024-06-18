@@ -70,7 +70,6 @@
     }
   </style>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125804026-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -87,7 +86,6 @@
       console.log("An interstitial ad is available");
     });
   </script>
-  <script src="//api.adinplay.com/libs/aiptag/pub/DGZ/basketbros.io/tag.min.js"></script>
 
   <script>
     var aiptag = aiptag || {};
@@ -101,7 +99,7 @@
       adplayer = new aipPlayer({
         AIP_ADBREAK_COMPLETE: function () {
           console.log("Adbreak Completed");
-          Main.DoneInterstitialAd(false);
+
         },
         AD_WIDTH: 960,
         AD_HEIGHT: 540,
@@ -227,24 +225,12 @@
   <div>
     <div class="notch-top-left" style="--notch-color: var(--background-color);"></div>
     <div class="info-box">
-      <h3>About BasketBros</h3>
-      <p>Alt link: www.lookinthe.net. Fun, fast-paced 1 on 1 basketball game with lots of action. Pick from a variety of
-        characters and let the play begin. Go for crazy dunks, hit the stepback 3, or maybe even punch out your
-        opponent!</p>
-      <p>The controls are very simple: Use either the arrow keys or wasd to control your baller. Jump by pressing the up
-        arrow, and jump again to shoot. Enter/Space will attack if you are on defense.</p>
-      <p>Be sure to allow notifications so you will know when fun new basketball characters are added to the game!</p>
+      <h3>About</h3>
+      <p> removed for reasons</p>
     </div>
     <div class="info-box">
       <h3>FAQ</h3>
-      <b>Why isn't the game loading?</b>
-      <p>You should check your internet connection and make sure our site isn't blocked. Also, disable all ad blockers.
-      </p>
-      <b>How do I play?</b>
-      <p>Just hop in and go dunk on some fools!</p>
-      <b>Which browser should I use?</b>
-      <p>You should use chrome. It is the only browser guaranteed to work. BasketBros has also been tested to work on
-        FireFox and Safari, but not guaranteed.</p>
+      <b>there is none</b>
     </div>
   </div>
   <div class="section">
@@ -342,97 +328,8 @@
       }
     }
 
-    var lastRefresh6 = 0;
-    function ShowAd6() {
-      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
-        return;
-      }
-      var l = window.document.getElementById("basketbros-io_300x250");
-      if (l == null) {
-        return;
-      }
-      l.style.display = "";
-      l.style.visibility = "visible";
 
-      if (typeof gCrazySDK !== "undefined") {
-        var d = new Date();
-        var ms = d.getTime();
-        if (ms - lastRefresh6 > 10000) {
-          //hndled by the first banner request
-          //gCrazySDK.requestBanner([{containerId: 'basketbros-io_300x250',size: '300x250',}]);
-          //gCrazySDK.requestResponsiveBanner(["basketbros-io_300x250"]);
-          lastRefresh6 = ms;
-        }
-      } else if (typeof aipDisplayTag !== "undefined") {
-        aipDisplayTag.refresh("basketbros-io_300x250");
-      }
-    }
-
-    var lastRefresh2 = 0;
-    function ShowAd2() {
-      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
-        return;
-      }
-      var l = window.document.getElementById("basketbros-io_300x250_2");
-      if (l == null) return;
-      l.style.display = "";
-      l.style.visibility = "visible";
-
-      if (typeof gCrazySDK !== "undefined") {
-        var d = new Date();
-        var ms = d.getTime();
-        if (ms - lastRefresh2 > 10000) {
-          //hndled by the first banner request
-          //gCrazySDK.requestBanner([{containerId: 'basketbros-io_300x250_2',size: '300x250',}]);
-          gCrazySDK.requestResponsiveBanner(["basketbros-io_300x250", "basketbros-io_300x250_2"]);
-
-          lastRefresh2 = ms;
-        }
-      } else if (typeof aipDisplayTag !== "undefined") {
-        aipDisplayTag.refresh("basketbros-io_300x250_2");
-      }
-    }
-    function ShowAd3() {
-      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
-        return;
-      }
-      var l = window.document.getElementById("basketbros-io_728x90");
-      if (l == null) return;
-      l.style.display = "";
-      l.style.visibility = "visible";
-      if (typeof gCrazySDK !== "undefined") {
-        gCrazySDK.requestResponsiveBanner(["basketbros-io_728x90"]);
-      } else if (typeof aipDisplayTag !== "undefined") aipDisplayTag.refresh("basketbros-io_728x90");
-    }
-    function ShowAd4() {
-      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
-        return;
-      }
-      if (window.innerWidth < 1200) return;
-      var l = window.document.getElementById("basketbros-io_player_300x600");
-      if (l == null) return;
-      l.style.display = "";
-      l.style.visibility = "visible";
-      if (typeof gCrazySDK !== "undefined") {
-        gCrazySDK.requestResponsiveBanner(["basketbros-io_player_300x600"]);
-        //gCrazySDK.requestBanner([{containerId: 'basketbros-io_player_300x600',size: '300x600',}]);
-      } else if (typeof aipDisplayTag !== "undefined") aipDisplayTag.refresh("basketbros-io_player_300x600");
-    }
-    function ShowAd7() {
-      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
-        return;
-      }
-      if (window.innerWidth < 1200) return;
-      var l = window.document.getElementById("basketbros-io_300x600_m");
-      if (l == null) return;
-      l.style.display = "";
-      l.style.visibility = "visible";
-      if (typeof gCrazySDK !== "undefined") {
-        gCrazySDK.requestResponsiveBanner(["basketbros-io_player_300x600"]);
-        //gCrazySDK.requestBanner([{containerId: 'basketbros-io_player_300x600',size: '300x600',}]);
-      } else if (typeof aipDisplayTag !== "undefined") aipDisplayTag.refresh("basketbros-io_300x600_m");
-    }
-
+  
     function right(str, chr) {
       return str.slice(str.length - chr, str.length);
     }
@@ -450,9 +347,7 @@
     }
 
     function ShowAdBreak() {
-      //check if the adslib is loaded correctly or blocked by adblockers etc.
       if (typeof gCrazySDK !== "undefined") {
-        Main.DoneInterstitialAd(false);
         return;
       }
 
@@ -470,19 +365,6 @@
       window.scroll(0, window.scrollY + event.deltaY);
     }
 
-    /*		setInterval(function () { 
-    var l = window.document.getElementById('basketbros-io_160x600');
-    if(l != null && typeof l.style !== 'undefined' && l.style.visibility == 'visible') {
-      ShowAd5();
-    }
-  }, 30000);
-
-  setInterval(function () { 
-    var l = window.document.getElementById('basketbros-io_160x600_2');
-    if(l != null && typeof l.style !== 'undefined' && l.style.visibility == 'visible') {
-      ShowAd1();
-    }
-  }, 32000);*/
 
     var sid = "vqpdso5mdr0n80kkknmkbi3ntg";
     function updateStatus(fromEvent = false) {
@@ -495,12 +377,9 @@
     function SendEvent(theEvent, theAction) {
       gtag(theEvent, theAction);
       updateStatus(true);
-      //console.log("Sending event: " + theEvent + "/" + theAction);
     }
-    //setInterval(function() { updateStatus, 4*60*1000);
     updateStatus(true);
 
-      //setInterval(ClearAds, 2000);
   </script>
   <script src="../../assets/js/PageConfig.js" defer></script>
 </body>

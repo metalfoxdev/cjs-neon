@@ -14,7 +14,7 @@
         <script type="application/javascript" src="/js/main.js"></script>
         <script src="TemplateData/UnityLoader.js"></script>
         <script>
-            var gameInstance = UnityLoader.instantiate("gameContainer", "Build/rs.json", {
+            var gameInstance = UnityLoader.instantiate("Container", "Build/rs.json", {
                 onProgress: UnityProgress,
                 Module: {
                     onRuntimeInitialized: function () {
@@ -26,7 +26,7 @@
     </head>
     <body style="margin: 0; overflow: hidden;">
         <div class="webgl-content">
-            <div id="gameContainer" style="width: 100%; height: 100%; margin: 0;"></div>
+            <div id="Container" style="width: 100%; height: 100%; margin: 0;"></div>
         </div>
     </body>
 </html>
